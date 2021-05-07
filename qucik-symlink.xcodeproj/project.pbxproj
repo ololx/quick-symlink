@@ -1,0 +1,68 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXGroup section */
+		A3DF7F5D2645936400719DD2 = {
+			isa = PBXGroup;
+			children = (
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		A3DF7F5E2645936400719DD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = A3DF7F612645936400719DD2 /* Build configuration list for PBXProject "qucik-symlink" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3DF7F5D2645936400719DD2;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		A3DF7F622645936400719DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		A3DF7F632645936400719DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3DF7F612645936400719DD2 /* Build configuration list for PBXProject "qucik-symlink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DF7F622645936400719DD2 /* Debug */,
+				A3DF7F632645936400719DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3DF7F5E2645936400719DD2 /* Project object */;
+}
