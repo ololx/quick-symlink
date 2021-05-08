@@ -17,8 +17,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
         // Show extensions, if FinderUtilities is not approved
-        if !FIFinderSyncController.isExtensionEnabled {
-            FIFinderSyncController.showExtensionManagementInterface()
+        if #available(OSX 10.14, *) {
+            if !FIFinderSyncController.isExtensionEnabled {
+                FIFinderSyncController.showExtensionManagementInterface()
+            }
+        } else {
+            // Fallback on earlier versions
         }
         
         // Terminate the application, as it is not needed anymore
