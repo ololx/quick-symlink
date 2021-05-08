@@ -21,7 +21,7 @@ class FinderSync: FIFinderSync {
         let finderSync = FIFinderSyncController.default();
         
         // Shared group preferences required
-        let sharedDefaults = UserDefaults.init(suiteName: "org.ololx.quick-symlink")
+        _ = UserDefaults.init(suiteName: "org.ololx.quick-symlink")
         
         if let mountedVolumes = FileManager.default.mountedVolumeURLs(includingResourceValuesForKeys: nil,
                                                                       options: .skipHiddenVolumes) {
@@ -45,7 +45,7 @@ class FinderSync: FIFinderSync {
         let quickSymlinkMenu = NSMenu(title: "")
         let quickSymlinkMenuItem = NSMenuItem(title: "Quick Symlink", action: nil, keyEquivalent: "")
         
-        quickSymlinkMenu.addItem(withTitle: "Pastle from clipboard", action: #selector(pastleSymlinkFromClipboard(_:)), keyEquivalent: "")
+        quickSymlinkMenu.addItem(withTitle: "Paste from clipboard", action: #selector(pastleSymlinkFromClipboard(_:)), keyEquivalent: "")
         quickSymlinkMenu.addItem(withTitle: "Copy to clipboard", action: #selector(copyPathToClipboard), keyEquivalent: "")
         
         quickSymLinkMainMenu.setSubmenu(quickSymlinkMenu, for: quickSymlinkMenuItem)
