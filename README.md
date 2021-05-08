@@ -6,7 +6,7 @@ The Quick Symlink is a `Finder extension`  which provides a `contextual menu ite
 
 [![license](https://img.shields.io/badge/license-MIT-informational?style=flat-square)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)
 
-[![platform](https://img.shields.io/badge/platform-OS_X_10.11+-important?style=flat-square)](https://en.wikipedia.org/wiki/Computing_platform)
+[![platform](https://img.shields.io/badge/platform-macOS_10.14+-important?style=flat-square)](https://en.wikipedia.org/wiki/Computing_platform)
 
 ---
 
@@ -59,12 +59,12 @@ These instructions allow to get a copy of this project and run it on a local mac
 
 Before using it, make sure that follows software are installed on the local machine:
 
-- **[OS X 10.11+](https://www.apple.com/ru/macos/what-is/)** - the operating system under which the extention is executing.
+- **[macOS 10.14+](https://www.apple.com/ru/macos/what-is/)** - the operating system under which the extention is executing.
 
 If any of the listed programs is not installed, then it can be installed by instruction as described below.
 
-1. #### OS X 10.11+
-    - Install OS X 10.11+  by [this](https://support.apple.com/ht201372) instruction.
+1. #### macOS 10.14+
+    - Install macOS 10.14+  by [this](https://support.apple.com/ht201372) instruction.
 
 ### Installing
 
