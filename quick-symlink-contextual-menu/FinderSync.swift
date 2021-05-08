@@ -18,7 +18,25 @@ class FinderSync: FIFinderSync {
         NSLog("FinderSync() launched from %@", Bundle.main.bundlePath as NSString);
         
         // Set up the directory we are syncing.
-        FIFinderSyncController.default().directoryURLs = [self.myFolderURL];
+        let finderSync = FIFinderSyncController.default();
+        
+        // Shared group preferences required
+        let sharedDefaults = UserDefaults.init(suiteName: "org.ololx.quick-symlink")
+        
+        if let mountedVolumes = FileManager.default.mountedVolumeURLs(includingResourceValuesForKeys: nil,
+                                                                      options: .skipHiddenVolumes) {
+            finderSync.directoryURLs = Set<URL>(mountedVolumes);
+        }
+        
+        let notificationCenter = NSWorkspace.shared.notificationCenter
+        notificationCenter.addObserver(forName: NSWorkspace.didMountNotification, object: nil, queue: .main) {
+            (notification) in
+            if let volumeURL = notification.userInfo?[NSWorkspace.volumeURLUserInfoKey] as? URL {
+                finderSync.directoryURLs.insert(volumeURL)
+            }
+        }
+        
+        //FIFinderSyncController.default().directoryURLs = [self.myFolderURL];
     }
     
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
@@ -67,7 +85,7 @@ class FinderSync: FIFinderSync {
         }
         
         let pathsFromClipboard = NSPasteboard.general.string(forType: NSPasteboard.PasteboardType.string) ?? "";
-        if pathsFromClipboard.isEmpty || !pathsFromClipboard.contains(";") {
+        if pathsFromClipboard.isEmpty {
             return;
         }
         
