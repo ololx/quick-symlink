@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3DF80172645A3B800719DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF80162645A3B800719DD2 /* AppDelegate.swift */; };
+		A3DF801C2645A3B800719DD2 /* quick_symlink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3DF801A2645A3B800719DD2 /* quick_symlink.xcdatamodeld */; };
+		A3DF801E2645A3B800719DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DF801D2645A3B800719DD2 /* Assets.xcassets */; };
+		A3DF80242645A3B800719DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3DF80222645A3B800719DD2 /* Main.storyboard */; };
+		A3DF80352645A3EE00719DD2 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF80342645A3EE00719DD2 /* FinderSync.swift */; };
+		A3DF803A2645A3EE00719DD2 /* quick-symlink-contextual-menu.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3DF80322645A3EE00719DD2 /* quick-symlink-contextual-menu.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3DF80382645A3EE00719DD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3DF800B2645A3B800719DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3DF80312645A3EE00719DD2;
+			remoteInfo = "quick-symlink-contextual-menu";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A3DF803E2645A3EE00719DD2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A3DF803A2645A3EE00719DD2 /* quick-symlink-contextual-menu.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A3DF80132645A3B800719DD2 /* quick-symlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quick-symlink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DF80162645A3B800719DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A3DF801B2645A3B800719DD2 /* quick_symlink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = quick_symlink.xcdatamodel; sourceTree = "<group>"; };
+		A3DF801D2645A3B800719DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3DF80232645A3B800719DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A3DF80252645A3B800719DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3DF80262645A3B800719DD2 /* quick_symlink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = quick_symlink.entitlements; sourceTree = "<group>"; };
+		A3DF80322645A3EE00719DD2 /* quick-symlink-contextual-menu.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "quick-symlink-contextual-menu.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DF80342645A3EE00719DD2 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		A3DF80362645A3EE00719DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3DF80372645A3EE00719DD2 /* quick_symlink_contextual_menu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = quick_symlink_contextual_menu.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3DF80102645A3B800719DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DF802F2645A3EE00719DD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3DF800A2645A3B800719DD2 = {
+			isa = PBXGroup;
+			children = (
+				A3DF80152645A3B800719DD2 /* quick-symlink */,
+				A3DF80332645A3EE00719DD2 /* quick-symlink-contextual-menu */,
+				A3DF80142645A3B800719DD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3DF80142645A3B800719DD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3DF80132645A3B800719DD2 /* quick-symlink.app */,
+				A3DF80322645A3EE00719DD2 /* quick-symlink-contextual-menu.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3DF80152645A3B800719DD2 /* quick-symlink */ = {
+			isa = PBXGroup;
+			children = (
+				A3DF80162645A3B800719DD2 /* AppDelegate.swift */,
+				A3DF801D2645A3B800719DD2 /* Assets.xcassets */,
+				A3DF80222645A3B800719DD2 /* Main.storyboard */,
+				A3DF80252645A3B800719DD2 /* Info.plist */,
+				A3DF80262645A3B800719DD2 /* quick_symlink.entitlements */,
+				A3DF801A2645A3B800719DD2 /* quick_symlink.xcdatamodeld */,
+			);
+			path = "quick-symlink";
+			sourceTree = "<group>";
+		};
+		A3DF80332645A3EE00719DD2 /* quick-symlink-contextual-menu */ = {
+			isa = PBXGroup;
+			children = (
+				A3DF80342645A3EE00719DD2 /* FinderSync.swift */,
+				A3DF80362645A3EE00719DD2 /* Info.plist */,
+				A3DF80372645A3EE00719DD2 /* quick_symlink_contextual_menu.entitlements */,
+			);
+			path = "quick-symlink-contextual-menu";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3DF80122645A3B800719DD2 /* quick-symlink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3DF80292645A3B800719DD2 /* Build configuration list for PBXNativeTarget "quick-symlink" */;
+			buildPhases = (
+				A3DF800F2645A3B800719DD2 /* Sources */,
+				A3DF80102645A3B800719DD2 /* Frameworks */,
+				A3DF80112645A3B800719DD2 /* Resources */,
+				A3DF803E2645A3EE00719DD2 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A3DF80392645A3EE00719DD2 /* PBXTargetDependency */,
+			);
+			name = "quick-symlink";
+			productName = "quick-symlink";
+			productReference = A3DF80132645A3B800719DD2 /* quick-symlink.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A3DF80312645A3EE00719DD2 /* quick-symlink-contextual-menu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3DF803B2645A3EE00719DD2 /* Build configuration list for PBXNativeTarget "quick-symlink-contextual-menu" */;
+			buildPhases = (
+				A3DF802E2645A3EE00719DD2 /* Sources */,
+				A3DF802F2645A3EE00719DD2 /* Frameworks */,
+				A3DF80302645A3EE00719DD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "quick-symlink-contextual-menu";
+			productName = "quick-symlink-contextual-menu";
+			productReference = A3DF80322645A3EE00719DD2 /* quick-symlink-contextual-menu.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3DF800B2645A3B800719DD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					A3DF80122645A3B800719DD2 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					A3DF80312645A3EE00719DD2 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = A3DF800E2645A3B800719DD2 /* Build configuration list for PBXProject "quick-symlink" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A3DF800A2645A3B800719DD2;
+			productRefGroup = A3DF80142645A3B800719DD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3DF80122645A3B800719DD2 /* quick-symlink */,
+				A3DF80312645A3EE00719DD2 /* quick-symlink-contextual-menu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A3DF80112645A3B800719DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DF80242645A3B800719DD2 /* Main.storyboard in Resources */,
+				A3DF801E2645A3B800719DD2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DF80302645A3EE00719DD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3DF800F2645A3B800719DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DF801C2645A3B800719DD2 /* quick_symlink.xcdatamodeld in Sources */,
+				A3DF80172645A3B800719DD2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3DF802E2645A3EE00719DD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3DF80352645A3EE00719DD2 /* FinderSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A3DF80392645A3EE00719DD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3DF80312645A3EE00719DD2 /* quick-symlink-contextual-menu */;
+			targetProxy = A3DF80382645A3EE00719DD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A3DF80222645A3B800719DD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3DF80232645A3B800719DD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A3DF80272645A3B800719DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A3DF80282645A3B800719DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		A3DF802A2645A3B800719DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "quick-symlink/quick_symlink.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C84A399767;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "quick-symlink/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A3DF802B2645A3B800719DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "quick-symlink/quick_symlink.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C84A399767;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "quick-symlink/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A3DF803C2645A3EE00719DD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "quick-symlink-contextual-menu/quick_symlink_contextual_menu.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C84A399767;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "quick-symlink-contextual-menu/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.quick-symlink-contextual-menu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A3DF803D2645A3EE00719DD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "quick-symlink-contextual-menu/quick_symlink_contextual_menu.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C84A399767;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "quick-symlink-contextual-menu/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.quick-symlink-contextual-menu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3DF800E2645A3B800719DD2 /* Build configuration list for PBXProject "quick-symlink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DF80272645A3B800719DD2 /* Debug */,
+				A3DF80282645A3B800719DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3DF80292645A3B800719DD2 /* Build configuration list for PBXNativeTarget "quick-symlink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DF802A2645A3B800719DD2 /* Debug */,
+				A3DF802B2645A3B800719DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3DF803B2645A3EE00719DD2 /* Build configuration list for PBXNativeTarget "quick-symlink-contextual-menu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3DF803C2645A3EE00719DD2 /* Debug */,
+				A3DF803D2645A3EE00719DD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A3DF801A2645A3B800719DD2 /* quick_symlink.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A3DF801B2645A3B800719DD2 /* quick_symlink.xcdatamodel */,
+			);
+			currentVersion = A3DF801B2645A3B800719DD2 /* quick_symlink.xcdatamodel */;
+			path = quick_symlink.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A3DF800B2645A3B800719DD2 /* Project object */;
+}
