@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A37637BD2648089F004329C2 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37637BC2648089F004329C2 /* FinderSync.swift */; };
+		A37637C22648089F004329C2 /* quick-symlink-toolbar-button.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A37637BA2648089F004329C2 /* quick-symlink-toolbar-button.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A3DF80172645A3B800719DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DF80162645A3B800719DD2 /* AppDelegate.swift */; };
 		A3DF801C2645A3B800719DD2 /* quick_symlink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3DF801A2645A3B800719DD2 /* quick_symlink.xcdatamodeld */; };
 		A3DF801E2645A3B800719DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3DF801D2645A3B800719DD2 /* Assets.xcassets */; };
@@ -16,6 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A37637C02648089F004329C2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3DF800B2645A3B800719DD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A37637B92648089F004329C2;
+			remoteInfo = "quick-symlink-toolbar-button";
+		};
 		A3DF80382645A3EE00719DD2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A3DF800B2645A3B800719DD2 /* Project object */;
@@ -32,6 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				A37637C22648089F004329C2 /* quick-symlink-toolbar-button.appex in Embed App Extensions */,
 				A3DF803A2645A3EE00719DD2 /* quick-symlink-contextual-menu.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -40,6 +50,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A37637BA2648089F004329C2 /* quick-symlink-toolbar-button.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "quick-symlink-toolbar-button.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A37637BC2648089F004329C2 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		A37637BE2648089F004329C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A37637BF2648089F004329C2 /* quick_symlink_toolbar_button.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = quick_symlink_toolbar_button.entitlements; sourceTree = "<group>"; };
 		A3DF80132645A3B800719DD2 /* quick-symlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quick-symlink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DF80162645A3B800719DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3DF801B2645A3B800719DD2 /* quick_symlink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = quick_symlink.xcdatamodel; sourceTree = "<group>"; };
@@ -54,6 +68,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A37637B72648089F004329C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A3DF80102645A3B800719DD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,11 +92,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A37637BB2648089F004329C2 /* quick-symlink-toolbar-button */ = {
+			isa = PBXGroup;
+			children = (
+				A37637BC2648089F004329C2 /* FinderSync.swift */,
+				A37637BE2648089F004329C2 /* Info.plist */,
+				A37637BF2648089F004329C2 /* quick_symlink_toolbar_button.entitlements */,
+			);
+			path = "quick-symlink-toolbar-button";
+			sourceTree = "<group>";
+		};
 		A3DF800A2645A3B800719DD2 = {
 			isa = PBXGroup;
 			children = (
 				A3DF80152645A3B800719DD2 /* quick-symlink */,
 				A3DF80332645A3EE00719DD2 /* quick-symlink-contextual-menu */,
+				A37637BB2648089F004329C2 /* quick-symlink-toolbar-button */,
 				A3DF80142645A3B800719DD2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +117,7 @@
 			children = (
 				A3DF80132645A3B800719DD2 /* quick-symlink.app */,
 				A3DF80322645A3EE00719DD2 /* quick-symlink-contextual-menu.appex */,
+				A37637BA2648089F004329C2 /* quick-symlink-toolbar-button.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +148,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A37637B92648089F004329C2 /* quick-symlink-toolbar-button */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A37637C52648089F004329C2 /* Build configuration list for PBXNativeTarget "quick-symlink-toolbar-button" */;
+			buildPhases = (
+				A37637B62648089F004329C2 /* Sources */,
+				A37637B72648089F004329C2 /* Frameworks */,
+				A37637B82648089F004329C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "quick-symlink-toolbar-button";
+			productName = "quick-symlink-toolbar-button";
+			productReference = A37637BA2648089F004329C2 /* quick-symlink-toolbar-button.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A3DF80122645A3B800719DD2 /* quick-symlink */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3DF80292645A3B800719DD2 /* Build configuration list for PBXNativeTarget "quick-symlink" */;
@@ -128,6 +178,7 @@
 			);
 			dependencies = (
 				A3DF80392645A3EE00719DD2 /* PBXTargetDependency */,
+				A37637C12648089F004329C2 /* PBXTargetDependency */,
 			);
 			name = "quick-symlink";
 			productName = "quick-symlink";
@@ -160,16 +211,22 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					A37637B92648089F004329C2 = {
+						CreatedOnToolsVersion = 12.4;
+						ProvisioningStyle = Automatic;
+					};
 					A3DF80122645A3B800719DD2 = {
 						CreatedOnToolsVersion = 12.4;
+						ProvisioningStyle = Automatic;
 					};
 					A3DF80312645A3EE00719DD2 = {
 						CreatedOnToolsVersion = 12.4;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = A3DF800E2645A3B800719DD2 /* Build configuration list for PBXProject "quick-symlink" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -183,11 +240,19 @@
 			targets = (
 				A3DF80122645A3B800719DD2 /* quick-symlink */,
 				A3DF80312645A3EE00719DD2 /* quick-symlink-contextual-menu */,
+				A37637B92648089F004329C2 /* quick-symlink-toolbar-button */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A37637B82648089F004329C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A3DF80112645A3B800719DD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,6 +272,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A37637B62648089F004329C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A37637BD2648089F004329C2 /* FinderSync.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A3DF800F2645A3B800719DD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +300,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A37637C12648089F004329C2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A37637B92648089F004329C2 /* quick-symlink-toolbar-button */;
+			targetProxy = A37637C02648089F004329C2 /* PBXContainerItemProxy */;
+		};
 		A3DF80392645A3EE00719DD2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A3DF80312645A3EE00719DD2 /* quick-symlink-contextual-menu */;
@@ -246,6 +324,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A37637C32648089F004329C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "quick-symlink-toolbar-button/quick_symlink_toolbar_button.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C84A399767;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "quick-symlink-toolbar-button/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.quick-symlink-toolbar-button";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A37637C42648089F004329C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "quick-symlink-toolbar-button/quick_symlink_toolbar_button.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = C84A399767;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "quick-symlink-toolbar-button/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.quick-symlink-toolbar-button";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		A3DF80272645A3B800719DD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -297,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -352,12 +464,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -374,11 +485,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "quick-symlink/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -398,11 +506,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "quick-symlink/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -418,11 +523,7 @@
 				DEVELOPMENT_TEAM = C84A399767;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "quick-symlink-contextual-menu/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.quick-symlink-contextual-menu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -439,11 +540,7 @@
 				DEVELOPMENT_TEAM = C84A399767;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "quick-symlink-contextual-menu/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.quick-symlink-contextual-menu";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -454,6 +551,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A37637C52648089F004329C2 /* Build configuration list for PBXNativeTarget "quick-symlink-toolbar-button" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A37637C32648089F004329C2 /* Debug */,
+				A37637C42648089F004329C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A3DF800E2645A3B800719DD2 /* Build configuration list for PBXProject "quick-symlink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
