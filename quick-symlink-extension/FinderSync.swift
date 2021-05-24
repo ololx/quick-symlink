@@ -64,7 +64,7 @@ class FinderSync: FIFinderSync {
     }
     
     override var toolbarItemImage: NSImage {
-        return NSImage(named: NSImage.cautionName)!;
+        return NSImage(named: .caution)!;
     }
     
     override func menu(for menuKind: FIMenuKind) -> NSMenu {

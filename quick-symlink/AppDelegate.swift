@@ -6,31 +6,24 @@
 //
 
 import Cocoa
-import SwiftUI
 import FinderSync
 
-@main
+@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    var window: NSWindow!
-
+    
+    // Close app when toolbar red button is pushed
+    func applicationShouldTerminateAfterLastWindowClosed(_ app: NSApplication) -> Bool {
+        return true
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
-        // Show extensions, if FinderUtilities is not approved
-        if #available(OSX 10.14, *) {
-            if !FIFinderSyncController.isExtensionEnabled {
-                FIFinderSyncController.showExtensionManagementInterface()
-            }
-        } else {
-            // Fallback on earlier versions
-        }
-        
+        // Insert code here to initialize your application
+        NSApp.activate(ignoringOtherApps: true)
         // Terminate the application, as it is not needed anymore
         NSApplication.shared.terminate(self)
     }
-
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
 }
-
