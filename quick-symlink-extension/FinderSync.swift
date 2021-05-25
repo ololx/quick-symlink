@@ -12,6 +12,8 @@ class FinderSync: FIFinderSync {
     
     var myFolderURL = URL(fileURLWithPath: "/");
     
+    let quickSymlinkToolbarItemImage = NSImage(named:NSImage.Name(rawValue: "quick-symlink-toolbar-item-image"));
+    
     override init() {
         super.init()
         
@@ -64,7 +66,7 @@ class FinderSync: FIFinderSync {
     }
     
     override var toolbarItemImage: NSImage {
-        return NSImage(named: .caution)!;
+        return quickSymlinkToolbarItemImage!;
     }
     
     override func menu(for menuKind: FIMenuKind) -> NSMenu {

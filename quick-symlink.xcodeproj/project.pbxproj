@@ -13,6 +13,7 @@
 		A30B9AB2265CA63300ACAA63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30B9AB0265CA63300ACAA63 /* Main.storyboard */; };
 		A30B9AC1265CA68900ACAA63 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B9AC0265CA68900ACAA63 /* FinderSync.swift */; };
 		A30B9AC6265CA68900ACAA63 /* quick-symlink-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A30B9ABE265CA68900ACAA63 /* quick-symlink-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A32EE8E0265D4D05008648AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32EE8DF265D4D05008648AA /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		A30B9AC2265CA68900ACAA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30B9AC3265CA68900ACAA63 /* quick_symlink_extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = quick_symlink_extension.entitlements; sourceTree = "<group>"; };
 		A30B9ACB265CA78600ACAA63 /* quick-symlink-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "quick-symlink-extension.entitlements"; sourceTree = "<group>"; };
+		A32EE8DF265D4D05008648AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				A30B9ACB265CA78600ACAA63 /* quick-symlink-extension.entitlements */,
 				A30B9AC0265CA68900ACAA63 /* FinderSync.swift */,
+				A32EE8DF265D4D05008648AA /* Assets.xcassets */,
 				A30B9AC2265CA68900ACAA63 /* Info.plist */,
 				A30B9AC3265CA68900ACAA63 /* quick_symlink_extension.entitlements */,
 			);
@@ -211,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32EE8E0265D4D05008648AA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
