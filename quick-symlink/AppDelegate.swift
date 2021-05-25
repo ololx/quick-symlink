@@ -2,35 +2,25 @@
 //  AppDelegate.swift
 //  quick-symlink
 //
-//  Created by Alexander A. Kropotin on 07.05.2021.
+//  Created by Alexander A. Kropotin on 25.05.21.
+//  Copyright © 2021 Alexander A. Kropotin. All rights reserved.
 //
 
 import Cocoa
-import SwiftUI
-import FinderSync
 
-@main
+@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var window: NSWindow!
+
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
-        // Show extensions, if FinderUtilities is not approved
-        if #available(OSX 10.14, *) {
-            if !FIFinderSyncController.isExtensionEnabled {
-                FIFinderSyncController.showExtensionManagementInterface()
-            }
-        } else {
-            // Fallback on earlier versions
-        }
-        
-        // Terminate the application, as it is not needed anymore
-        NSApplication.shared.terminate(self)
+        // Insert code here to initialize your application
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+
+
 }
 

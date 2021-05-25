@@ -9,8 +9,10 @@ import Cocoa
 import FinderSync
 
 class FinderSync: FIFinderSync {
-
+    
     var myFolderURL = URL(fileURLWithPath: "/");
+    
+    let quickSymlinkToolbarItemImage = NSImage(named:NSImage.Name(rawValue: "quick-symlink-toolbar-item-image"));
     
     override init() {
         super.init()
@@ -64,7 +66,7 @@ class FinderSync: FIFinderSync {
     }
     
     override var toolbarItemImage: NSImage {
-        return NSImage(named: NSImage.cautionName)!;
+        return quickSymlinkToolbarItemImage!;
     }
     
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
@@ -89,7 +91,7 @@ class FinderSync: FIFinderSync {
         //Get all selected path
         guard let target = FIFinderSyncController.default().selectedItemURLs() else {
             NSLog("FinderSync() failed to obtain targeted URLs: %@");
-
+            
             return;
         }
         
@@ -100,7 +102,7 @@ class FinderSync: FIFinderSync {
             paths.append(";");
         }
         paths.removeLast();
-
+        
         //Copy path list to clipboard
         let pasteboard = NSPasteboard.general;
         pasteboard.declareTypes([NSPasteboard.PasteboardType.string], owner: nil);
@@ -111,7 +113,7 @@ class FinderSync: FIFinderSync {
         //Get selected folder path
         guard let target = FIFinderSyncController.default().targetedURL() else {
             NSLog("FinderSync() failed to obtain targeted URL: %@");
-                
+            
             return;
         }
         
@@ -139,7 +141,7 @@ class FinderSync: FIFinderSync {
                 counter += 1;
                 targetPath = target
             }
-        
+            
             do {
                 try FileManager.init().createSymbolicLink(at: targetPath.appendingPathComponent(fileName), withDestinationURL: URL(fileURLWithPath: path));
             } catch let error as NSError {
