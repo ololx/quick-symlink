@@ -10,6 +10,27 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Add the new menu item for replacing selected folders and files with symlinks.
 
+## [0.0.4] - 2021-05-28
+
+### Added
+
+- The application icons.
+
+### Changed
+
+- The toolbar icons.
+
+## [0.0.3] - 2021-05-25
+
+### Added
+
+- The toolbar icon.
+
+### Changed
+
+- The language version from Swift 5.0 to Swift 4.0.
+- The project version from xcode 12.x to xCode 9.2.
+
 ## [0.0.2] - 2021-05-10
 
 ### Added
