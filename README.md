@@ -6,7 +6,7 @@ The Quick Symlink is a `Finder extension`  which provides a `contextual menu ite
 
 [![license](https://img.shields.io/badge/license-MIT-informational?style=flat-square)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)
 
-[![platform](https://img.shields.io/badge/platform-OS X_10.11+-important?style=flat-square)](https://en.wikipedia.org/wiki/Computing_platform)
+[![platform](https://img.shields.io/badge/platform-OS_X_10.11+-important?style=flat-square)](https://en.wikipedia.org/wiki/Computing_platform)
 
 ---
 
@@ -90,6 +90,16 @@ In order to install it is quite simple to:
    ```
 
 4. Open up `System Preferences > Extensions` and enable the extension `quick-symlink`.
+
+**Otherwise, it's possible to install and remove the extention using the actual extension bundled into the app.**
+
+1. To install and approve the extension, run this:
+
+pluginkit -a quick-symlink.app/Contents/PlugIns/quick-symlink-extension.appex/
+
+2. To remove it, run this:
+
+pluginkit -r quick-symlink.app/Contents/PlugIns/quick-symlink-extension.appex/
 
 ### Downloading
 
