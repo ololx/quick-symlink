@@ -95,11 +95,15 @@ In order to install it is quite simple to:
 
 1. To install and approve the extension, run this:
 
+```bash
 pluginkit -a quick-symlink.app/Contents/PlugIns/quick-symlink-extension.appex/
+```
 
 2. To remove it, run this:
 
+```bash
 pluginkit -r quick-symlink.app/Contents/PlugIns/quick-symlink-extension.appex/
+```
 
 ### Downloading
 
