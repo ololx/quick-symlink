@@ -72,8 +72,9 @@ class FinderSync: FIFinderSync {
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
         // Produce a menu for the extension (to be shown when right clicking a folder in Finder)
         let quickSymlinkMenu = NSMenu(title: "");
-        quickSymlinkMenu.addItem(withTitle: "Paste from clipboard", action: #selector(pastleSymlinkFromClipboard(_:)), keyEquivalent: "");
-        quickSymlinkMenu.addItem(withTitle: "Copy to clipboard", action: #selector(copyPathToClipboard), keyEquivalent: "");
+        quickSymlinkMenu.addItem(withTitle: "Copy path from here", action: #selector(copyPathToClipboard(_:)), keyEquivalent: "");
+        quickSymlinkMenu.addItem(withTitle: "Paste link to here", action: #selector(pastleSymlinkFromClipboard(_:)), keyEquivalent: "");
+        quickSymlinkMenu.addItem(withTitle: "Move to here and replace with link", action: #selector(replaceFileWithSymlinkFromClipboard(_:)), keyEquivalent: "");
         
         if menuKind.rawValue == 3 {
             return quickSymlinkMenu;
@@ -109,6 +110,49 @@ class FinderSync: FIFinderSync {
         pasteboard.setString(paths, forType: NSPasteboard.PasteboardType.string);
     }
     
+    @IBAction func replaceFileWithSymlinkFromClipboard(_ sender: AnyObject?) {
+        //Get selected folder path
+        guard let target = FIFinderSyncController.default().targetedURL() else {
+            NSLog("FinderSync() failed to obtain targeted URL: %@");
+            
+            return;
+        }
+        
+        let pathsFromClipboard = NSPasteboard.general.string(forType: NSPasteboard.PasteboardType.string) ?? "";
+        if pathsFromClipboard.isEmpty {
+            return;
+        }
+        
+        let paths = pathsFromClipboard.components(separatedBy: ";");
+        for path in paths {
+            var targetPath = target
+            let pathUrl = URL(fileURLWithPath: path);
+            let originSourceName = pathUrl.absoluteURL.deletingPathExtension().lastPathComponent;
+            let fileType = pathUrl.absoluteURL.pathExtension;
+            
+            var fileExtention = fileType;
+            if !fileType.isEmpty {
+                fileExtention = ".\(fileType)"
+            }
+            
+            var fileName = "\(originSourceName)\(fileExtention)";
+            var counter = 1
+            targetPath = targetPath.appendingPathComponent(fileName);
+            while FileManager.default.fileExists(atPath: targetPath.path) {
+                fileName = "\(originSourceName)-\(counter)\(fileExtention)";
+                counter += 1;
+                targetPath = target.appendingPathComponent(fileName);
+            }
+            
+            do {
+                try FileManager.default.moveItem(at: pathUrl, to: targetPath);
+                try FileManager.default.createSymbolicLink(at: pathUrl, withDestinationURL: targetPath);
+            } catch let error as NSError {
+                NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
+            }
+        }
+    }
+    
     @IBAction func pastleSymlinkFromClipboard(_ sender: AnyObject?) {
         //Get selected folder path
         guard let target = FIFinderSyncController.default().targetedURL() else {
@@ -136,14 +180,15 @@ class FinderSync: FIFinderSync {
             
             var fileName = "\(originSourceName)\(fileExtention)";
             var counter = 1
-            while FileManager.default.fileExists(atPath: targetPath.appendingPathComponent(fileName).path) {
+            targetPath = targetPath.appendingPathComponent(fileName);
+            while FileManager.default.fileExists(atPath: targetPath.path) {
                 fileName = "\(originSourceName)-\(counter)\(fileExtention)";
                 counter += 1;
-                targetPath = target
+                targetPath = target.appendingPathComponent(fileName);
             }
             
             do {
-                try FileManager.init().createSymbolicLink(at: targetPath.appendingPathComponent(fileName), withDestinationURL: URL(fileURLWithPath: path));
+                try FileManager.default.createSymbolicLink(at: targetPath, withDestinationURL: URL(fileURLWithPath: path));
             } catch let error as NSError {
                 NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
             }
