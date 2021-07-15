@@ -2,7 +2,7 @@
 
 The Quick Symlink is a `Finder extension`  which provides a `contextual menu item` for the symbolic links creation on macOS. 
 
-[![status](https://img.shields.io/badge/status-active-important?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.4.0-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/latest_release_date-May_10,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-July_15,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
+[![status](https://img.shields.io/badge/status-active-active?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.4.1-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/last release-May_10,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-July_15,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
 
 [![license](https://img.shields.io/badge/license-MIT-informational?style=flat-square)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)
 
@@ -34,9 +34,18 @@ Of course, creating symbolic links via the terminal is very easy and convenient.
 
 ## 📸 Demo
 
-This gif demonstrates the `Quick Symlink` usage.
+This GIF demonstrates how the `Quick Symlink` allows quite simple to copy files or folders and paste symlink somewhere.
 
-<img src="https://github.com/ololx/quick-symlink/blob/assets/demo/quick-symlink-demo-1.gif?raw=true" width="700"/>
+<img src="https://github.com/ololx/quick-symlink/blob/assets/demo/quick-symlink-demo-1.gif?raw=true" width="100%"/>
+
+This GIF demonstrates how the `Quick Symlink` allows quite simple to copy files or folders, paste them somewhere, and replace them with symlinks.
+
+<img src="https://github.com/ololx/quick-symlink/blob/assets/demo/quick-symlink-demo-replace-with-link.gif?raw=true" width="100%"/>
+
+These GIFs demonstrate the `Quick Symlink` localization (English and Russian).
+
+<img src="https://github.com/ololx/quick-symlink/blob/assets/demo/quick-symlink-demo-localization-1.gif?raw=true" width="100%"/>
+<img src="https://github.com/ololx/quick-symlink/blob/assets/demo/quick-symlink-demo-localization-2.gif?raw=true" width="100%"/>
 
 ## 🎚 Features
 
