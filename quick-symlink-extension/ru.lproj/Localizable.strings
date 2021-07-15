@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  quick-symlink
+
+  Created by Alexander A. Kropotin on 15/07/2021.
+  Copyright © 2021 Alexander A. Kropotin. All rights reserved.
+*/
+
+/* Class = "NSMenuItem"; */
+"EXTENTION_NAME" = "Быстрая символьная ссылка";
+
+/* Class = "NSMenuItem"; */
+"EXTENTION_TOOL_TIP" = "Создать символьные ссылки для выбранных файлов и папок";
+
+/* Class = "NSMenuItem"; */
+"COPY_PATH_ACTION_NAME" = "Скопировать путь отсюда";
+
+/* Class = "NSMenuItem"; */
+"PASTE_LINK_ACTION_NAME" = "Вставить ссылку сюда";
+
+/* Class = "NSMenuItem"; */
+"REPLACE_WITH_LINK_ACTION_NAME" = "Переместить сюда и заменить ссылкой";
