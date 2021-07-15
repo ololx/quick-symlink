@@ -14,6 +14,7 @@
 		A30B9AC1265CA68900ACAA63 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B9AC0265CA68900ACAA63 /* FinderSync.swift */; };
 		A30B9AC6265CA68900ACAA63 /* quick-symlink-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A30B9ABE265CA68900ACAA63 /* quick-symlink-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A32EE8E0265D4D05008648AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32EE8DF265D4D05008648AA /* Assets.xcassets */; };
+		A3D93EB526A09B5A004E068D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3D93EB726A09B5A004E068D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,13 @@
 		A30B9AC3265CA68900ACAA63 /* quick_symlink_extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = quick_symlink_extension.entitlements; sourceTree = "<group>"; };
 		A30B9ACB265CA78600ACAA63 /* quick-symlink-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "quick-symlink-extension.entitlements"; sourceTree = "<group>"; };
 		A32EE8DF265D4D05008648AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A3D93EA426A08EDF004E068D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		A3D93EA826A0904F004E068D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		A3D93EA926A09053004E068D /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		A3D93EB626A09B5A004E068D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A3D93EB826A09B61004E068D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A3D93EB926A09B72004E068D /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A3D93EBA26A09B73004E068D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		A30B9A9E265CA63300ACAA63 = {
 			isa = PBXGroup;
 			children = (
+				A3D93EB726A09B5A004E068D /* Localizable.strings */,
 				A30B9AA9265CA63300ACAA63 /* quick-symlink */,
 				A30B9ABF265CA68900ACAA63 /* quick-symlink-extension */,
 				A30B9AA8265CA63300ACAA63 /* Products */,
@@ -188,6 +197,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				"en-GB",
 			);
 			mainGroup = A30B9A9E265CA63300ACAA63;
 			productRefGroup = A30B9AA8265CA63300ACAA63 /* Products */;
@@ -215,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A32EE8E0265D4D05008648AA /* Assets.xcassets in Resources */,
+				A3D93EB526A09B5A004E068D /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,8 +265,23 @@
 			isa = PBXVariantGroup;
 			children = (
 				A30B9AB1265CA63300ACAA63 /* Base */,
+				A3D93EA426A08EDF004E068D /* ru */,
+				A3D93EA826A0904F004E068D /* en */,
+				A3D93EA926A09053004E068D /* en-GB */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A3D93EB726A09B5A004E068D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3D93EB626A09B5A004E068D /* en */,
+				A3D93EB826A09B61004E068D /* Base */,
+				A3D93EB926A09B72004E068D /* en-GB */,
+				A3D93EBA26A09B73004E068D /* ru */,
+			);
+			name = Localizable.strings;
+			path = "quick-symlink-extension";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -264,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -308,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -321,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -359,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

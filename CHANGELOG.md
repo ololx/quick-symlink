@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Add the new menu item for replacing selected folders and files with symlinks.
 
+## [0.4.0] - 2021-07-15
+
+### Added
+
+- Add the extension localization for English and Russian languages.
+
 ## [0.0.4] - 2021-05-28
 
 ### Added
@@ -35,7 +41,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ### Added
 
-- The `Finder toolbar menu`  which allows to:
+- Add the `Finder toolbar menu`  which allows to:
   - automate the symbolic links creation.
   - create symbolic links for the selected files or folders.
   - save symbolic links to the selected directory.

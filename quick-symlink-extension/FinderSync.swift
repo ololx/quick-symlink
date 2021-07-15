@@ -58,11 +58,11 @@ class FinderSync: FIFinderSync {
     // MARK: - Menu and toolbar item support
     
     override var toolbarItemName: String {
-        return "Quick Symlink";
+        return  NSLocalizedString("EXTENTION_NAME", comment: "");
     }
     
     override var toolbarItemToolTip: String {
-        return "Quick Symlink: Click the toolbar item for a menu";
+        return NSLocalizedString("EXTENTION_TOOL_TIP", comment: "");
     }
     
     override var toolbarItemImage: NSImage {
@@ -72,15 +72,31 @@ class FinderSync: FIFinderSync {
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
         // Produce a menu for the extension (to be shown when right clicking a folder in Finder)
         let quickSymlinkMenu = NSMenu(title: "");
-        quickSymlinkMenu.addItem(withTitle: "Copy path from here", action: #selector(copyPathToClipboard(_:)), keyEquivalent: "");
-        quickSymlinkMenu.addItem(withTitle: "Paste link to here", action: #selector(pastleSymlinkFromClipboard(_:)), keyEquivalent: "");
-        quickSymlinkMenu.addItem(withTitle: "Move to here and replace with link", action: #selector(replaceFileWithSymlinkFromClipboard(_:)), keyEquivalent: "");
+        quickSymlinkMenu.addItem(
+            withTitle: NSLocalizedString("COPY_PATH_ACTION_NAME", comment: ""),
+            action: #selector(copyPathToClipboard(_:)),
+            keyEquivalent: ""
+        );
+        quickSymlinkMenu.addItem(
+            withTitle: NSLocalizedString("PASTE_LINK_ACTION_NAME", comment: ""),
+            action: #selector(pastleSymlinkFromClipboard(_:)),
+            keyEquivalent: ""
+        );
+        quickSymlinkMenu.addItem(
+            withTitle: NSLocalizedString("REPLACE_WITH_LINK_ACTION_NAME", comment: ""),
+            action: #selector(replaceFileWithSymlinkFromClipboard(_:)),
+            keyEquivalent: ""
+        );
         
         if menuKind.rawValue == 3 {
             return quickSymlinkMenu;
         } else {
             let quickSymLinkMainMenu = NSMenu(title: "");
-            let quickSymlinkMenuItem = NSMenuItem(title: "Quick Symlink", action: nil, keyEquivalent: "");
+            let quickSymlinkMenuItem = NSMenuItem(
+                title:  NSLocalizedString("EXTENTION_NAME", comment: ""),
+                action: nil,
+                keyEquivalent: ""
+            );
             quickSymLinkMainMenu.setSubmenu(quickSymlinkMenu, for: quickSymlinkMenuItem);
             quickSymLinkMainMenu.addItem(quickSymlinkMenuItem);
             
