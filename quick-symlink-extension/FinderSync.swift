@@ -10,9 +10,11 @@ import FinderSync
 
 class FinderSync: FIFinderSync {
     
-    var myFolderURL = URL(fileURLWithPath: "/");
-    
     let quickSymlinkToolbarItemImage = NSImage(named:NSImage.Name(rawValue: "quick-symlink-toolbar-item-image"));
+    
+    let copyPathAction = CopyPathAction.init();
+    let pasteLinkAction = PasteLinkAction.init();
+    let replaceWithLinkAction = ReplaceWithLinkAction.init();
     
     override init() {
         super.init()
@@ -105,109 +107,14 @@ class FinderSync: FIFinderSync {
     }
     
     @IBAction func copyPathToClipboard(_ sender: AnyObject?) {
-        //Get all selected path
-        guard let target = FIFinderSyncController.default().selectedItemURLs() else {
-            NSLog("FinderSync() failed to obtain targeted URLs: %@");
-            
-            return;
-        }
-        
-        // Append all selected paths to string
-        var paths = ""
-        for path in target {
-            paths.append(contentsOf: path.relativePath);
-            paths.append(";");
-        }
-        paths.removeLast();
-        
-        //Copy path list to clipboard
-        let pasteboard = NSPasteboard.general;
-        pasteboard.declareTypes([NSPasteboard.PasteboardType.string], owner: nil);
-        pasteboard.setString(paths, forType: NSPasteboard.PasteboardType.string);
+        self.copyPathAction.execute();
     }
     
     @IBAction func replaceFileWithSymlinkFromClipboard(_ sender: AnyObject?) {
-        //Get selected folder path
-        guard let target = FIFinderSyncController.default().targetedURL() else {
-            NSLog("FinderSync() failed to obtain targeted URL: %@");
-            
-            return;
-        }
-        
-        let pathsFromClipboard = NSPasteboard.general.string(forType: NSPasteboard.PasteboardType.string) ?? "";
-        if pathsFromClipboard.isEmpty {
-            return;
-        }
-        
-        let paths = pathsFromClipboard.components(separatedBy: ";");
-        for path in paths {
-            var targetPath = target
-            let pathUrl = URL(fileURLWithPath: path);
-            let originSourceName = pathUrl.absoluteURL.deletingPathExtension().lastPathComponent;
-            let fileType = pathUrl.absoluteURL.pathExtension;
-            
-            var fileExtention = fileType;
-            if !fileType.isEmpty {
-                fileExtention = ".\(fileType)"
-            }
-            
-            var fileName = "\(originSourceName)\(fileExtention)";
-            var counter = 1
-            targetPath = targetPath.appendingPathComponent(fileName);
-            while FileManager.default.fileExists(atPath: targetPath.path) {
-                fileName = "\(originSourceName)-\(counter)\(fileExtention)";
-                counter += 1;
-                targetPath = target.appendingPathComponent(fileName);
-            }
-            
-            do {
-                try FileManager.default.moveItem(at: pathUrl, to: targetPath);
-                try FileManager.default.createSymbolicLink(at: pathUrl, withDestinationURL: targetPath);
-            } catch let error as NSError {
-                NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
-            }
-        }
+        self.replaceWithLinkAction.execute();
     }
     
     @IBAction func pastleSymlinkFromClipboard(_ sender: AnyObject?) {
-        //Get selected folder path
-        guard let target = FIFinderSyncController.default().targetedURL() else {
-            NSLog("FinderSync() failed to obtain targeted URL: %@");
-            
-            return;
-        }
-        
-        let pathsFromClipboard = NSPasteboard.general.string(forType: NSPasteboard.PasteboardType.string) ?? "";
-        if pathsFromClipboard.isEmpty {
-            return;
-        }
-        
-        let paths = pathsFromClipboard.components(separatedBy: ";");
-        for path in paths {
-            var targetPath = target
-            let pathUrl = URL(fileURLWithPath: path);
-            let originSourceName = pathUrl.absoluteURL.deletingPathExtension().lastPathComponent;
-            let fileType = pathUrl.absoluteURL.pathExtension;
-            
-            var fileExtention = fileType;
-            if !fileType.isEmpty {
-                fileExtention = ".\(fileType)"
-            }
-            
-            var fileName = "\(originSourceName)\(fileExtention)";
-            var counter = 1
-            targetPath = targetPath.appendingPathComponent(fileName);
-            while FileManager.default.fileExists(atPath: targetPath.path) {
-                fileName = "\(originSourceName)-\(counter)\(fileExtention)";
-                counter += 1;
-                targetPath = target.appendingPathComponent(fileName);
-            }
-            
-            do {
-                try FileManager.default.createSymbolicLink(at: targetPath, withDestinationURL: URL(fileURLWithPath: path));
-            } catch let error as NSError {
-                NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
-            }
-        }
+        self.pasteLinkAction.execute();
     }
 }

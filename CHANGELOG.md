@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Add the new menu item for replacing selected folders and files with symlinks.
 
+## [0.4.1] - 2021-07-15
+
+### Changed
+
+- Implement the  `Command` pattern for the `Quick Symlink` actions.
+
 ## [0.4.0] - 2021-07-15
 
 ### Added
