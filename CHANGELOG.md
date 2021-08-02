@@ -6,15 +6,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased] - yyyy-mm-dd
 
+### Changed
+
+- Refactor application.
+
+## [0.5.0] - 2021-08-02
+
 ### Added
 
-- Add the new menu item for replacing selected folders and files with symlinks.
+- Add the new menu item for creating symlink in a parent directory (parent for target objects).
 
 ## [0.4.1] - 2021-07-15
 
 ### Changed
 
 - Implement the  `Command` pattern for the `Quick Symlink` actions.
+
+### Added
+
+- Add the new menu item for replacing selected folders and files with symlinks.
 
 ## [0.4.0] - 2021-07-15
 

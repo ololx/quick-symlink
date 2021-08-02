@@ -2,7 +2,7 @@
 
 The Quick Symlink is a `Finder extension`  which provides a `contextual menu item` for the symbolic links creation on macOS. 
 
-[![status](https://img.shields.io/badge/status-active-active?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.4.1-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/last_release-July_16,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-July_16,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
+[![status](https://img.shields.io/badge/status-active-active?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.5.0-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/last_release-August_02,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-August_02,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
 
 [![license](https://img.shields.io/badge/license-MIT-informational?style=flat-square)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)
 
@@ -12,16 +12,16 @@ The Quick Symlink is a `Finder extension`  which provides a `contextual menu ite
 
 ## 📇 Table of Contents
 
-- [About](#about)
-- [Demo](#demo)
-- [Features](#feature)
-- [Getting Started](#getting-started)
-- [Built With](#built-with)
-- [Contributing](#contributing)
-- [Code of Conduct](#code-of-conduct)
-- [Versioning](#versioning)
-- [Authors](#authors)
-- [Licensing](#licensing)
+- [About](#-about-)
+- [Demo](#-demo-)
+- [Features](#-feature-)
+- [Getting Started](#-getting-started-)
+- [Built With](#-built-with-)
+- [Contributing](#-contributing-)
+- [Code of Conduct](#-code-of-conduct-)
+- [Versioning](#-versioning-)
+- [Authors](#-authors-)
+- [Licensing](#-licensing-)
 
 ##  📖 About
 
@@ -34,6 +34,10 @@ Of course, creating symbolic links via the terminal is very easy and convenient.
 
 ## 📸 Demo
 
+This GIF demonstrates how the `Quick Symlink` allows quite simple to select files or folders and paste symlink in the current directory.
+
+<img src="https://github.com/ololx/quick-symlink/blob/assets/demo/quick-symlink-demo-2.gif?raw=true" width="100%"/>
+
 This GIF demonstrates how the `Quick Symlink` allows quite simple to copy files or folders and paste symlink somewhere.
 
 <img src="https://github.com/ololx/quick-symlink/blob/assets/demo/quick-symlink-demo-1.gif?raw=true" width="100%"/>
@@ -42,15 +46,18 @@ This GIF demonstrates how the `Quick Symlink` allows quite simple to copy files 
 
 <img src="https://github.com/ololx/quick-symlink/blob/assets/demo/quick-symlink-demo-replace-with-link.gif?raw=true" width="100%"/>
 
-These GIFs demonstrate the `Quick Symlink` localization (English and Russian).
-
-<img src="https://github.com/ololx/quick-symlink/blob/assets/demo/quick-symlink-demo-localization-1.gif?raw=true" width="100%"/>
-<img src="https://github.com/ololx/quick-symlink/blob/assets/demo/quick-symlink-demo-localization-2.gif?raw=true" width="100%"/>
+<details close>
+    <summary>These GIFs demonstrate the `Quick Symlink` localization.</summary>
+	<img src="https://github.com/ololx/quick-symlink/blob/assets/demo/quick-symlink-demo-localization-1.gif?raw=true" width="100%"/>
+	<img src="https://github.com/ololx/quick-symlink/blob/assets/demo/quick-symlink-demo-localization-2.gif?raw=true" width="100%"/>
+</details>
 
 ## 🎚 Features
 
-- Create a symbolic links in a several clicks via the context menu instead of the terminal promt.
-- Create a symbolic links for the selected files or folders.
+- Create a symbolic links in a several clicks via the context menu instead of the terminal promt:
+  - Select files or folders and create symlink for them.
+  - Copy files or folders and paste symlink somewhere.
+  - Copy files or folders, paste them somewhere, and replace them with symlinks.
 
 ### To Do
 
@@ -58,7 +65,7 @@ These GIFs demonstrate the `Quick Symlink` localization (English and Russian).
 
 ### Changelog
 
-- For more information on a releases, a features and a changes, please read the [changelog](CHANGELOG.md) notes.
+- For more information on releases, features and changes, please read the [changelog](CHANGELOG.md) notes.
 
 ## 🚦 Getting Started
 
@@ -73,7 +80,7 @@ Before using it, make sure that follows software are installed on the local mach
 If any of the listed programs is not installed, then it can be installed by instruction as described below.
 
 1. #### OS X 10.11+
-    - Install macOS 10.14+  by [this](https://support.apple.com/ht201372) instruction.
+    - Install macOS 10.11+  by [this](https://support.apple.com/ht201372) instruction.
 
 ### Installing
 
@@ -132,14 +139,34 @@ https://github.com/ololx/quick-symlink.git
 
 ### Using
 
-For use it is required to:
+This tool allows to:
+* Create symlinks in the current directory
+* Create symlinks in another directory
+* Replace objects with symbolic links
+
+#### Creating symlinks in the current directory
 
 1. Select folders or files for which a symbolic link is needed.
-2. Call the contextual menu by right-clicking on selected.
+2. Call the contextual menu by the right-clicking on selected.
+3. Select menu item `Quick Symlink --> Create symlink for`.
+
+#### Creating symlinks in another directory
+
+1. Select folders or files for which a symbolic link is needed.
+2. Call the contextual menu by the right-clicking on selected.
+3. Select menu item `Quick Symlink --> Copy path from here`.
+4. Go to a destination folder.
+5. Call the contextual menu by right-clicking on the filder.
+6. Select menu item `Quick Symlink --> Paste to here`.
+
+#### Replacing objects with symbolic links
+
+1. Select folders or files for which a symbolic link is needed.
+2. Call the contextual menu by the right-clicking on selected.
 3. Select menu item `Quick Symlink --> Copy to clipboard`.
 4. Go to a destination folder.
 5. Call the contextual menu by right-clicking on the filder.
-6. Select menu item `Quick Symlink --> Paste from clipboard`.
+6. Select menu item `Quick Symlink --> Move it here and replace with a link`.
 
 ## 🛠 Built With
 
