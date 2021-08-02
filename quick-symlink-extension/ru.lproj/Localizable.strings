@@ -7,7 +7,7 @@
 */
 
 /* Class = "NSMenuItem"; */
-"EXTENTION_NAME" = "Быстрая символьная ссылка";
+"EXTENTION_NAME" = "Быстрый симлинк";
 
 /* Class = "NSMenuItem"; */
 "EXTENTION_TOOL_TIP" = "Создать символьные ссылки для выбранных файлов и папок";
@@ -20,3 +20,6 @@
 
 /* Class = "NSMenuItem"; */
 "REPLACE_WITH_LINK_ACTION_NAME" = "Переместить сюда и заменить ссылкой";
+
+/* Class = "NSMenuItem"; */
+"CREATE_LINK_ACTION_NAME" = "Создать ссылку";

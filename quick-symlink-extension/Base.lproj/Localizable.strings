@@ -20,3 +20,6 @@
 
 /* Class = "NSMenuItem"; */
 "REPLACE_WITH_LINK_ACTION_NAME" = "Move it here and replace with a link";
+
+/* Class = "NSMenuItem"; */
+"CREATE_LINK_ACTION_NAME" = "Create link for";

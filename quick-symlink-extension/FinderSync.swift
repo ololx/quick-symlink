@@ -15,6 +15,7 @@ class FinderSync: FIFinderSync {
     let copyPathAction = CopyPathAction.init();
     let pasteLinkAction = PasteLinkAction.init();
     let replaceWithLinkAction = ReplaceWithLinkAction.init();
+    let createSymlink = CreateLinkAction.init();
     
     override init() {
         super.init()
@@ -75,6 +76,11 @@ class FinderSync: FIFinderSync {
         // Produce a menu for the extension (to be shown when right clicking a folder in Finder)
         let quickSymlinkMenu = NSMenu(title: "");
         quickSymlinkMenu.addItem(
+            withTitle: NSLocalizedString("CREATE_LINK_ACTION_NAME", comment: ""),
+            action: #selector(createSymlink(_:)),
+            keyEquivalent: ""
+        );
+        quickSymlinkMenu.addItem(
             withTitle: NSLocalizedString("COPY_PATH_ACTION_NAME", comment: ""),
             action: #selector(copyPathToClipboard(_:)),
             keyEquivalent: ""
@@ -116,5 +122,9 @@ class FinderSync: FIFinderSync {
     
     @IBAction func pastleSymlinkFromClipboard(_ sender: AnyObject?) {
         self.pasteLinkAction.execute();
+    }
+    
+    @IBAction func createSymlink(_ sender: AnyObject?) {
+        self.createSymlink.execute();
     }
 }
