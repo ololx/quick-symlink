@@ -34,7 +34,7 @@ public class CopyPathAction: QuickSymlinkAction {
         paths.removeLast();
         
         //Copy path list to clipboard
-        let pasteboard = NSPasteboard.general;
+        let pasteboard = NSPasteboard.init(name: NSPasteboard.Name.init(rawValue: "qs"));
         pasteboard.declareTypes([NSPasteboard.PasteboardType.string], owner: nil);
         pasteboard.setString(paths, forType: NSPasteboard.PasteboardType.string);
     }

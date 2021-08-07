@@ -2,7 +2,7 @@
 
 The Quick Symlink is a `Finder extension`  which provides a `contextual menu item` for the symbolic links creation on macOS. 
 
-[![status](https://img.shields.io/badge/status-active-active?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.5.0-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/last_release-August_02,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-August_02,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
+[![status](https://img.shields.io/badge/status-active-active?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.6.0-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/last_release-August_07,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-August_07,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
 
 [![license](https://img.shields.io/badge/license-MIT-informational?style=flat-square)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)
 
@@ -140,33 +140,32 @@ https://github.com/ololx/quick-symlink.git
 ### Using
 
 This tool allows to:
-* Create symlinks in the current directory
-* Create symlinks in another directory
-* Replace objects with symbolic links
+<details close>
+    <summary>Create symlinks in the current directory</summary>
+1. Select folders or files for which a symbolic link is needed.<br/>
+2. Call the contextual menu by the right-clicking on selected.<br/>
+3. Select menu item `Quick Symlink --> Create symlink for`.<br/>
+</details>
 
-#### Creating symlinks in the current directory
+<details close>
+    <summary>Create symlinks in another directory</summary>
+1. Select folders or files for which a symbolic link is needed.<br/>
+2. Call the contextual menu by the right-clicking on selected.<br/>
+3. Select menu item `Quick Symlink --> Copy path from here`.<br/>
+4. Go to a destination folder.<br/>
+5. Call the contextual menu by right-clicking on the filder.<br/>
+6. Select menu item `Quick Symlink --> Paste to here`.<br/>
+</details>
 
-1. Select folders or files for which a symbolic link is needed.
-2. Call the contextual menu by the right-clicking on selected.
-3. Select menu item `Quick Symlink --> Create symlink for`.
-
-#### Creating symlinks in another directory
-
-1. Select folders or files for which a symbolic link is needed.
-2. Call the contextual menu by the right-clicking on selected.
-3. Select menu item `Quick Symlink --> Copy path from here`.
-4. Go to a destination folder.
-5. Call the contextual menu by right-clicking on the filder.
-6. Select menu item `Quick Symlink --> Paste to here`.
-
-#### Replacing objects with symbolic links
-
-1. Select folders or files for which a symbolic link is needed.
-2. Call the contextual menu by the right-clicking on selected.
-3. Select menu item `Quick Symlink --> Copy to clipboard`.
-4. Go to a destination folder.
-5. Call the contextual menu by right-clicking on the filder.
-6. Select menu item `Quick Symlink --> Move it here and replace with a link`.
+<details close>
+    <summary>Replace objects with symbolic links</summary>
+1. Select folders or files for which a symbolic link is needed.<br/>
+2. Call the contextual menu by the right-clicking on selected.<br/>
+3. Select menu item `Quick Symlink --> Copy to clipboard`.<br/>
+4. Go to a destination folder.<br/>
+5. Call the contextual menu by right-clicking on the filder.<br/>
+6. Select menu item `Quick Symlink --> Move it here and replace with a link`.<br/>
+</details>
 
 ## 🛠 Built With
 

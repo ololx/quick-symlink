@@ -25,10 +25,12 @@ public class PasteLinkAction: QuickSymlinkAction {
             return;
         }
         
-        let pathsFromClipboard = NSPasteboard.general.string(forType: NSPasteboard.PasteboardType.string) ?? "";
+        let pasteboard = NSPasteboard.init(name: NSPasteboard.Name.init(rawValue: "qs"));
+        let pathsFromClipboard = pasteboard.string(forType: NSPasteboard.PasteboardType.string) ?? "";
         if pathsFromClipboard.isEmpty {
             return;
         }
+        pasteboard.clearContents();
         
         let paths = pathsFromClipboard.components(separatedBy: ";");
         for path in paths {
