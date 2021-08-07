@@ -10,6 +10,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
+## [0.6.0] - 2021-08-02
+
+### Changed
+
+- Changed the activity property of some menu items according to the rule:
+	- if no object was copied, then the menu items "Paste link to here" an "Move it here and replace with a link"  are not active;
+	- if at least one object was not copied, then the menu items  "Paste link to here" an "Move it here and replace with a link" are inactive;
+
+### Added
+
+- Added cleaning clipboard after inserting links;
+
 ## [0.5.0] - 2021-08-02
 
 ### Added

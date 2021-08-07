@@ -40,8 +40,6 @@ class FinderSync: FIFinderSync {
                 finderSync.directoryURLs.insert(volumeURL);
             }
         }
-        
-        //FIFinderSyncController.default().directoryURLs = [self.myFolderURL];
     }
     
     // MARK: - Primary Finder Sync protocol methods
@@ -80,21 +78,31 @@ class FinderSync: FIFinderSync {
             action: #selector(createSymlink(_:)),
             keyEquivalent: ""
         );
+        
         quickSymlinkMenu.addItem(
             withTitle: NSLocalizedString("COPY_PATH_ACTION_NAME", comment: ""),
             action: #selector(copyPathToClipboard(_:)),
             keyEquivalent: ""
         );
-        quickSymlinkMenu.addItem(
-            withTitle: NSLocalizedString("PASTE_LINK_ACTION_NAME", comment: ""),
+        
+        let pastleSymlinkFromClipboardMenuItem = NSMenuItem.init(
+            title: NSLocalizedString("PASTE_LINK_ACTION_NAME", comment: ""),
             action: #selector(pastleSymlinkFromClipboard(_:)),
             keyEquivalent: ""
         );
-        quickSymlinkMenu.addItem(
-            withTitle: NSLocalizedString("REPLACE_WITH_LINK_ACTION_NAME", comment: ""),
+        quickSymlinkMenu.addItem(pastleSymlinkFromClipboardMenuItem);
+        
+        let replaceFileWithSymlinkFromClipboardMenuItem = NSMenuItem.init(
+            title: NSLocalizedString("REPLACE_WITH_LINK_ACTION_NAME", comment: ""),
             action: #selector(replaceFileWithSymlinkFromClipboard(_:)),
             keyEquivalent: ""
         );
+        quickSymlinkMenu.addItem(replaceFileWithSymlinkFromClipboardMenuItem);
+        
+        if (NSPasteboard.init(name: NSPasteboard.Name.init(rawValue: "qs")).string(forType: NSPasteboard.PasteboardType.string) ?? "").isEmpty {
+            pastleSymlinkFromClipboardMenuItem.isEnabled = false;
+            replaceFileWithSymlinkFromClipboardMenuItem.isEnabled = false;
+        }
         
         if menuKind.rawValue == 3 {
             return quickSymlinkMenu;
