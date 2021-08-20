@@ -7,6 +7,11 @@
 - [x]  Add the new menu item for creating symlink in a parent directory (parent for target objects).
 - [ ]  Add localization for other languages.
 - [ ]  Implement the VIPER pattern.
+- [ ]  Develop additional `Finder extension`  which allows to create a `hard links` for selected folders and files via contextual menu.
+- [ ]  Develop the action panel for created symbolic links  and hard lonks (in the app window): 
+	- [ ] a) (if broken) process to browse finder for 'Find/fix missing target'
+  - [ ] b) Modify existing paths and symbolic link features
+- [ ]  Add the 
 - [ ]  Refactor app.
 
 ---
