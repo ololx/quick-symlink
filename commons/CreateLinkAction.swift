@@ -28,8 +28,31 @@ public class CreateLinkAction: QuickSymlinkAction {
         for path in target {
             let targetPath = self.getTargetPath(path, to: path.deletingLastPathComponent());
             
+            
+            var pathFragments = path.pathComponents;
+            var targetPathFragments = targetPath?.deletingLastPathComponent().pathComponents;
+            
+            var destinationPath = URL.init(string: "./")!;
+        
+            for targetPathFragment in targetPathFragments! {
+                if (!pathFragments.contains(targetPathFragment)) {
+                    break;
+                }
+                
+                pathFragments.remove(at: 0);
+                targetPathFragments?.remove(at: 0);
+            }
+            
+            for _ in targetPathFragments! {
+                destinationPath.appendPathComponent("../");
+            }
+            
+            for pathFragment in pathFragments {
+                destinationPath.appendPathComponent(pathFragment);
+            }
+            
             do {
-                try FileManager.default.createSymbolicLink(at: targetPath!, withDestinationURL: path);
+                try FileManager.default.createSymbolicLink(at: targetPath!, withDestinationURL: destinationPath);
             } catch let error as NSError {
                 NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
             }

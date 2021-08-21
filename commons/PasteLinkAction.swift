@@ -37,8 +37,30 @@ public class PasteLinkAction: QuickSymlinkAction {
             let pathUrl = URL(fileURLWithPath: path);
             let targetPath = self.getTargetPath(pathUrl, to: target);
             
+            var pathFragments = pathUrl.pathComponents;
+            var targetPathFragments = targetPath?.deletingLastPathComponent().pathComponents;
+            
+            var destinationPath = URL.init(string: "./")!;
+            
+            for targetPathFragment in targetPathFragments! {
+                if (!pathFragments.contains(targetPathFragment)) {
+                    break;
+                }
+                
+                pathFragments.remove(at: 0);
+                targetPathFragments?.remove(at: 0);
+            }
+            
+            for _ in targetPathFragments! {
+                destinationPath.appendPathComponent("../");
+            }
+            
+            for pathFragment in pathFragments {
+                destinationPath.appendPathComponent(pathFragment);
+            }
+            
             do {
-                try FileManager.default.createSymbolicLink(at: targetPath!, withDestinationURL: URL(fileURLWithPath: path));
+                try FileManager.default.createSymbolicLink(at: targetPath!, withDestinationURL: destinationPath);
             } catch let error as NSError {
                 NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
             }
