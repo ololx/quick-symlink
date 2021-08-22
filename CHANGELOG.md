@@ -10,6 +10,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
+## [0.7.0] - 2021-08-22
+
+### Added
+
+- Added new classes `Path` for working with path's and creating relative path from specified directory.
+- Add unit-tests cases for the `Path` class.
+
+### Changed
+
+- Change soft link creation using relative instead absolute path.
+
 ## [0.6.0] - 2021-08-02
 
 ### Changed

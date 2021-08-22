@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A307B41726D21E39002EEF58 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41626D21E39002EEF58 /* Path.swift */; };
+		A307B41826D21E39002EEF58 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41626D21E39002EEF58 /* Path.swift */; };
+		A307B41A26D22116002EEF58 /* ResourcePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41926D22116002EEF58 /* ResourcePath.swift */; };
+		A307B41B26D22116002EEF58 /* ResourcePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41926D22116002EEF58 /* ResourcePath.swift */; };
+		A307B42F26D2563B002EEF58 /* ResourcePathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B42E26D2563B002EEF58 /* ResourcePathTest.swift */; };
+		A307B43026D257C5002EEF58 /* ResourcePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41926D22116002EEF58 /* ResourcePath.swift */; };
+		A307B43126D257CA002EEF58 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41626D21E39002EEF58 /* Path.swift */; };
 		A30B9AAB265CA63300ACAA63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B9AAA265CA63300ACAA63 /* AppDelegate.swift */; };
 		A30B9AAD265CA63300ACAA63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B9AAC265CA63300ACAA63 /* ViewController.swift */; };
 		A30B9AAF265CA63300ACAA63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30B9AAE265CA63300ACAA63 /* Assets.xcassets */; };
@@ -28,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A307B42926D255FB002EEF58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A30B9A9F265CA63300ACAA63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A30B9AA6265CA63300ACAA63;
+			remoteInfo = "quick-symlink";
+		};
 		A30B9AC4265CA68900ACAA63 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A30B9A9F265CA63300ACAA63 /* Project object */;
@@ -52,6 +66,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A307B41626D21E39002EEF58 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		A307B41926D22116002EEF58 /* ResourcePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcePath.swift; sourceTree = "<group>"; };
+		A307B42426D255FB002EEF58 /* quick-symlink-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quick-symlink-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A307B42826D255FB002EEF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A307B42E26D2563B002EEF58 /* ResourcePathTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcePathTest.swift; sourceTree = "<group>"; };
 		A30B9AA7265CA63300ACAA63 /* quick-symlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quick-symlink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30B9AAA265CA63300ACAA63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A30B9AAC265CA63300ACAA63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +99,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A307B42126D255FB002EEF58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A30B9AA4265CA63300ACAA63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,6 +123,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A307B41426D21DBE002EEF58 /* QuickSymlinkActions */ = {
+			isa = PBXGroup;
+			children = (
+				A316477626B7B403001DD969 /* CreateLinkAction.swift */,
+				A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */,
+				A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */,
+				A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */,
+				A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */,
+			);
+			path = QuickSymlinkActions;
+			sourceTree = "<group>";
+		};
+		A307B41526D21E23002EEF58 /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A307B41626D21E39002EEF58 /* Path.swift */,
+				A307B41926D22116002EEF58 /* ResourcePath.swift */,
+			);
+			path = FileSystem;
+			sourceTree = "<group>";
+		};
+		A307B42526D255FB002EEF58 /* quick-symlink-tests */ = {
+			isa = PBXGroup;
+			children = (
+				A307B42826D255FB002EEF58 /* Info.plist */,
+				A307B42E26D2563B002EEF58 /* ResourcePathTest.swift */,
+			);
+			path = "quick-symlink-tests";
+			sourceTree = "<group>";
+		};
 		A30B9A9E265CA63300ACAA63 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +160,7 @@
 				A3D93EB726A09B5A004E068D /* Localizable.strings */,
 				A30B9AA9265CA63300ACAA63 /* quick-symlink */,
 				A30B9ABF265CA68900ACAA63 /* quick-symlink-extension */,
+				A307B42526D255FB002EEF58 /* quick-symlink-tests */,
 				A30B9AA8265CA63300ACAA63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,6 +170,7 @@
 			children = (
 				A30B9AA7265CA63300ACAA63 /* quick-symlink.app */,
 				A30B9ABE265CA68900ACAA63 /* quick-symlink-extension.appex */,
+				A307B42426D255FB002EEF58 /* quick-symlink-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,11 +203,8 @@
 		A345C9BD26A0B12C004FBF0F /* commons */ = {
 			isa = PBXGroup;
 			children = (
-				A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */,
-				A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */,
-				A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */,
-				A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */,
-				A316477626B7B403001DD969 /* CreateLinkAction.swift */,
+				A307B41526D21E23002EEF58 /* FileSystem */,
+				A307B41426D21DBE002EEF58 /* QuickSymlinkActions */,
 			);
 			path = commons;
 			sourceTree = "<group>";
@@ -157,6 +212,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A307B42326D255FB002EEF58 /* quick-symlink-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A307B42B26D255FB002EEF58 /* Build configuration list for PBXNativeTarget "quick-symlink-tests" */;
+			buildPhases = (
+				A307B42026D255FB002EEF58 /* Sources */,
+				A307B42126D255FB002EEF58 /* Frameworks */,
+				A307B42226D255FB002EEF58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A307B42A26D255FB002EEF58 /* PBXTargetDependency */,
+			);
+			name = "quick-symlink-tests";
+			productName = "quick-symlink-tests";
+			productReference = A307B42426D255FB002EEF58 /* quick-symlink-tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A30B9AA6265CA63300ACAA63 /* quick-symlink */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A30B9AB7265CA63300ACAA63 /* Build configuration list for PBXNativeTarget "quick-symlink" */;
@@ -203,6 +276,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Alexander A. Kropotin";
 				TargetAttributes = {
+					A307B42326D255FB002EEF58 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A30B9AA6265CA63300ACAA63;
+					};
 					A30B9AA6265CA63300ACAA63 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -235,11 +313,19 @@
 			targets = (
 				A30B9AA6265CA63300ACAA63 /* quick-symlink */,
 				A30B9ABD265CA68900ACAA63 /* quick-symlink-extension */,
+				A307B42326D255FB002EEF58 /* quick-symlink-tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A307B42226D255FB002EEF58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A30B9AA5265CA63300ACAA63 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,12 +347,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A307B42026D255FB002EEF58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A307B43026D257C5002EEF58 /* ResourcePath.swift in Sources */,
+				A307B42F26D2563B002EEF58 /* ResourcePathTest.swift in Sources */,
+				A307B43126D257CA002EEF58 /* Path.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A30B9AA3265CA63300ACAA63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A307B41A26D22116002EEF58 /* ResourcePath.swift in Sources */,
 				A345C9C826A0B552004FBF0F /* ReplaceWithLinkAction.swift in Sources */,
 				A316477726B7B403001DD969 /* CreateLinkAction.swift in Sources */,
+				A307B41726D21E39002EEF58 /* Path.swift in Sources */,
 				A30B9AAD265CA63300ACAA63 /* ViewController.swift in Sources */,
 				A345C9C226A0B30F004FBF0F /* CopyPathAction.swift in Sources */,
 				A345C9BF26A0B200004FBF0F /* QuickSymlinkAction.swift in Sources */,
@@ -280,6 +378,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A30B9AC1265CA68900ACAA63 /* FinderSync.swift in Sources */,
+				A307B41826D21E39002EEF58 /* Path.swift in Sources */,
+				A307B41B26D22116002EEF58 /* ResourcePath.swift in Sources */,
 				A30D4A4B26A0C14400BA775B /* PasteLinkAction.swift in Sources */,
 				A30D4A4C26A0C14400BA775B /* ReplaceWithLinkAction.swift in Sources */,
 				A316477826B7B403001DD969 /* CreateLinkAction.swift in Sources */,
@@ -291,6 +391,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A307B42A26D255FB002EEF58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A30B9AA6265CA63300ACAA63 /* quick-symlink */;
+			targetProxy = A307B42926D255FB002EEF58 /* PBXContainerItemProxy */;
+		};
 		A30B9AC5265CA68900ACAA63 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A30B9ABD265CA68900ACAA63 /* quick-symlink-extension */;
@@ -325,6 +430,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A307B42C26D255FB002EEF58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "quick-symlink-tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/quick-symlink.app/Contents/MacOS/quick-symlink";
+			};
+			name = Debug;
+		};
+		A307B42D26D255FB002EEF58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "quick-symlink-tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/quick-symlink.app/Contents/MacOS/quick-symlink";
+			};
+			name = Release;
+		};
 		A30B9AB5265CA63300ACAA63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -502,6 +639,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A307B42B26D255FB002EEF58 /* Build configuration list for PBXNativeTarget "quick-symlink-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A307B42C26D255FB002EEF58 /* Debug */,
+				A307B42D26D255FB002EEF58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A30B9AA2265CA63300ACAA63 /* Build configuration list for PBXProject "quick-symlink" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

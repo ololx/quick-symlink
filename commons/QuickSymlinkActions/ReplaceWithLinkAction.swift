@@ -1,5 +1,5 @@
 //
-//  PasteSymlinkAction.swift
+//  ReplaceWithLinkAction.swift
 //  quick-symlink
 //
 //  Created by Alexander A. Kropotin on 15/07/2021.
@@ -9,7 +9,7 @@
 import Foundation
 import FinderSync
 
-public class PasteLinkAction: QuickSymlinkAction {
+public class ReplaceWithLinkAction: QuickSymlinkAction {
     
     private var finderController: FIFinderSyncController;
     
@@ -38,7 +38,8 @@ public class PasteLinkAction: QuickSymlinkAction {
             let targetPath = self.getTargetPath(pathUrl, to: target);
             
             do {
-                try FileManager.default.createSymbolicLink(at: targetPath!, withDestinationURL: URL(fileURLWithPath: path));
+                try FileManager.default.moveItem(at: pathUrl, to: targetPath!);
+                try FileManager.default.createSymbolicLink(at: pathUrl, withDestinationURL: ResourcePath.of(url: targetPath).relativize(to: ResourcePath.of(url: pathUrl.deletingLastPathComponent())).toUrl()!);
             } catch let error as NSError {
                 NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
             }

@@ -29,7 +29,7 @@ public class CreateLinkAction: QuickSymlinkAction {
             let targetPath = self.getTargetPath(path, to: path.deletingLastPathComponent());
             
             do {
-                try FileManager.default.createSymbolicLink(at: targetPath!, withDestinationURL: path);
+                try FileManager.default.createSymbolicLink(at: targetPath!, withDestinationURL: ResourcePath.of(url: path).relativize(to: ResourcePath.of(url: targetPath?.deletingLastPathComponent())).toUrl()!);
             } catch let error as NSError {
                 NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
             }
