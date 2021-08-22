@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A307B41726D21E39002EEF58 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41626D21E39002EEF58 /* Path.swift */; };
+		A307B41826D21E39002EEF58 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41626D21E39002EEF58 /* Path.swift */; };
+		A307B41A26D22116002EEF58 /* ResourcePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41926D22116002EEF58 /* ResourcePath.swift */; };
+		A307B41B26D22116002EEF58 /* ResourcePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41926D22116002EEF58 /* ResourcePath.swift */; };
 		A30B9AAB265CA63300ACAA63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B9AAA265CA63300ACAA63 /* AppDelegate.swift */; };
 		A30B9AAD265CA63300ACAA63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B9AAC265CA63300ACAA63 /* ViewController.swift */; };
 		A30B9AAF265CA63300ACAA63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30B9AAE265CA63300ACAA63 /* Assets.xcassets */; };
@@ -52,6 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A307B41626D21E39002EEF58 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		A307B41926D22116002EEF58 /* ResourcePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcePath.swift; sourceTree = "<group>"; };
 		A30B9AA7265CA63300ACAA63 /* quick-symlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quick-symlink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30B9AAA265CA63300ACAA63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A30B9AAC265CA63300ACAA63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A307B41426D21DBE002EEF58 /* QuickSymlinkActions */ = {
+			isa = PBXGroup;
+			children = (
+				A316477626B7B403001DD969 /* CreateLinkAction.swift */,
+				A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */,
+				A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */,
+				A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */,
+				A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */,
+			);
+			path = QuickSymlinkActions;
+			sourceTree = "<group>";
+		};
+		A307B41526D21E23002EEF58 /* FileSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A307B41626D21E39002EEF58 /* Path.swift */,
+				A307B41926D22116002EEF58 /* ResourcePath.swift */,
+			);
+			path = FileSystem;
+			sourceTree = "<group>";
+		};
 		A30B9A9E265CA63300ACAA63 = {
 			isa = PBXGroup;
 			children = (
@@ -145,11 +172,8 @@
 		A345C9BD26A0B12C004FBF0F /* commons */ = {
 			isa = PBXGroup;
 			children = (
-				A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */,
-				A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */,
-				A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */,
-				A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */,
-				A316477626B7B403001DD969 /* CreateLinkAction.swift */,
+				A307B41526D21E23002EEF58 /* FileSystem */,
+				A307B41426D21DBE002EEF58 /* QuickSymlinkActions */,
 			);
 			path = commons;
 			sourceTree = "<group>";
@@ -265,8 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A307B41A26D22116002EEF58 /* ResourcePath.swift in Sources */,
 				A345C9C826A0B552004FBF0F /* ReplaceWithLinkAction.swift in Sources */,
 				A316477726B7B403001DD969 /* CreateLinkAction.swift in Sources */,
+				A307B41726D21E39002EEF58 /* Path.swift in Sources */,
 				A30B9AAD265CA63300ACAA63 /* ViewController.swift in Sources */,
 				A345C9C226A0B30F004FBF0F /* CopyPathAction.swift in Sources */,
 				A345C9BF26A0B200004FBF0F /* QuickSymlinkAction.swift in Sources */,
@@ -280,6 +306,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A30B9AC1265CA68900ACAA63 /* FinderSync.swift in Sources */,
+				A307B41826D21E39002EEF58 /* Path.swift in Sources */,
+				A307B41B26D22116002EEF58 /* ResourcePath.swift in Sources */,
 				A30D4A4B26A0C14400BA775B /* PasteLinkAction.swift in Sources */,
 				A30D4A4C26A0C14400BA775B /* ReplaceWithLinkAction.swift in Sources */,
 				A316477826B7B403001DD969 /* CreateLinkAction.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  PasteSymlinkAction.swift
+//  ReplaceWithLinkAction.swift
 //  quick-symlink
 //
 //  Created by Alexander A. Kropotin on 15/07/2021.
@@ -9,7 +9,7 @@
 import Foundation
 import FinderSync
 
-public class PasteLinkAction: QuickSymlinkAction {
+public class ReplaceWithLinkAction: QuickSymlinkAction {
     
     private var finderController: FIFinderSyncController;
     
@@ -37,30 +37,9 @@ public class PasteLinkAction: QuickSymlinkAction {
             let pathUrl = URL(fileURLWithPath: path);
             let targetPath = self.getTargetPath(pathUrl, to: target);
             
-            var pathFragments = pathUrl.pathComponents;
-            var targetPathFragments = targetPath?.deletingLastPathComponent().pathComponents;
-            
-            var destinationPath = URL.init(string: "./")!;
-            
-            for targetPathFragment in targetPathFragments! {
-                if (!pathFragments.contains(targetPathFragment)) {
-                    break;
-                }
-                
-                pathFragments.remove(at: 0);
-                targetPathFragments?.remove(at: 0);
-            }
-            
-            for _ in targetPathFragments! {
-                destinationPath.appendPathComponent("../");
-            }
-            
-            for pathFragment in pathFragments {
-                destinationPath.appendPathComponent(pathFragment);
-            }
-            
             do {
-                try FileManager.default.createSymbolicLink(at: targetPath!, withDestinationURL: destinationPath);
+                try FileManager.default.moveItem(at: pathUrl, to: targetPath!);
+                try FileManager.default.createSymbolicLink(at: pathUrl, withDestinationURL: ResourcePath.of(url: targetPath).relativize(to: ResourcePath.of(url: pathUrl.deletingLastPathComponent())).toUrl()!);
             } catch let error as NSError {
                 NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
             }
