@@ -33,7 +33,6 @@ public class ResourcePath: Path {
         var targetPathFragments = other.getPathFragments();
         
         var destinationPath = URL.init(string: "./")!;
-        
         for targetPathFragment in targetPathFragments! {
             if (!(pathFragments?.contains(targetPathFragment))!) {
                 break;
@@ -50,6 +49,8 @@ public class ResourcePath: Path {
         for pathFragment in pathFragments! {
             destinationPath.appendPathComponent(pathFragment);
         }
+        
+        //pathFragments!.append(contentsOf: targetPathFragments!);
         
         return ResourcePath.of(url: destinationPath);
     }
