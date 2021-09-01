@@ -31,6 +31,8 @@
 		A345C9C226A0B30F004FBF0F /* CopyPathAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */; };
 		A345C9C526A0B49C004FBF0F /* PasteLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */; };
 		A345C9C826A0B552004FBF0F /* ReplaceWithLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */; };
+		A36F9B0626DFAC27009E95CE /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
+		A36F9B0726DFB127009E95CE /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
 		A3D93EB526A09B5A004E068D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3D93EB726A09B5A004E068D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,7 @@
 		A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPathAction.swift; sourceTree = "<group>"; };
 		A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteLinkAction.swift; sourceTree = "<group>"; };
 		A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceWithLinkAction.swift; sourceTree = "<group>"; };
+		A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLinkManager.swift; sourceTree = "<group>"; };
 		A3D93EA426A08EDF004E068D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		A3D93EA826A0904F004E068D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		A3D93EA926A09053004E068D /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -123,7 +126,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A307B41426D21DBE002EEF58 /* QuickSymlinkActions */ = {
+		A307B41426D21DBE002EEF58 /* action */ = {
 			isa = PBXGroup;
 			children = (
 				A316477626B7B403001DD969 /* CreateLinkAction.swift */,
@@ -132,16 +135,16 @@
 				A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */,
 				A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */,
 			);
-			path = QuickSymlinkActions;
+			path = action;
 			sourceTree = "<group>";
 		};
-		A307B41526D21E23002EEF58 /* FileSystem */ = {
+		A307B41526D21E23002EEF58 /* path */ = {
 			isa = PBXGroup;
 			children = (
 				A307B41626D21E39002EEF58 /* Path.swift */,
 				A307B41926D22116002EEF58 /* ResourcePath.swift */,
 			);
-			path = FileSystem;
+			path = path;
 			sourceTree = "<group>";
 		};
 		A307B42526D255FB002EEF58 /* quick-symlink-tests */ = {
@@ -203,10 +206,19 @@
 		A345C9BD26A0B12C004FBF0F /* commons */ = {
 			isa = PBXGroup;
 			children = (
-				A307B41526D21E23002EEF58 /* FileSystem */,
-				A307B41426D21DBE002EEF58 /* QuickSymlinkActions */,
+				A36F9B0426DFAA4B009E95CE /* link */,
+				A307B41526D21E23002EEF58 /* path */,
 			);
 			path = commons;
+			sourceTree = "<group>";
+		};
+		A36F9B0426DFAA4B009E95CE /* link */ = {
+			isa = PBXGroup;
+			children = (
+				A307B41426D21DBE002EEF58 /* action */,
+				A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */,
+			);
+			path = link;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +382,7 @@
 				A345C9BF26A0B200004FBF0F /* QuickSymlinkAction.swift in Sources */,
 				A30B9AAB265CA63300ACAA63 /* AppDelegate.swift in Sources */,
 				A345C9C526A0B49C004FBF0F /* PasteLinkAction.swift in Sources */,
+				A36F9B0626DFAC27009E95CE /* FileLinkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +398,7 @@
 				A316477826B7B403001DD969 /* CreateLinkAction.swift in Sources */,
 				A30D4A4D26A0C18B00BA775B /* QuickSymlinkAction.swift in Sources */,
 				A30D4A4A26A0C14400BA775B /* CopyPathAction.swift in Sources */,
+				A36F9B0726DFB127009E95CE /* FileLinkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

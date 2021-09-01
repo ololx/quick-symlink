@@ -13,8 +13,11 @@ public class ReplaceWithLinkAction: QuickSymlinkAction {
     
     private var finderController: FIFinderSyncController;
     
-    public init() {
+    private var fileLinkManager: FileLinkManager;
+    
+    public init(fileLinkManager: FileLinkManager!) {
         self.finderController = FIFinderSyncController.default();
+        self.fileLinkManager = fileLinkManager;
     }
     
     public func execute() {
@@ -35,14 +38,8 @@ public class ReplaceWithLinkAction: QuickSymlinkAction {
         let paths = pathsFromClipboard.components(separatedBy: ";");
         for path in paths {
             let pathUrl = URL(fileURLWithPath: path);
-            let targetPath = self.getTargetPath(pathUrl, to: target);
-            
-            do {
-                try FileManager.default.moveItem(at: pathUrl, to: targetPath!);
-                try FileManager.default.createSymbolicLink(at: pathUrl, withDestinationURL: ResourcePath.of(url: targetPath).relativize(to: ResourcePath.of(url: pathUrl.deletingLastPathComponent())).toUrl()!);
-            } catch let error as NSError {
-                NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
-            }
+            let targetPath = self.fileLinkManager.getTargetPath(pathUrl, to: target);
+            self.fileLinkManager.replaceWith(of: pathUrl, with: targetPath);
         }
     }
 }

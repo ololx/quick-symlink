@@ -13,8 +13,11 @@ public class CreateLinkAction: QuickSymlinkAction {
     
     private var finderController: FIFinderSyncController;
     
-    public init() {
+    private var fileLinkManager: FileLinkManager;
+    
+    public init(fileLinkManager: FileLinkManager!) {
         self.finderController = FIFinderSyncController.default();
+        self.fileLinkManager = fileLinkManager;
     }
     
     public func execute() {
@@ -26,14 +29,8 @@ public class CreateLinkAction: QuickSymlinkAction {
         }
         
         for path in target {
-            let targetPath = self.getTargetPath(path, to: path.deletingLastPathComponent());
-            
-            do {
-                try FileManager.default.createSymbolicLink(at: targetPath!, withDestinationURL: ResourcePath.of(url: path).relativize(to: ResourcePath.of(url: targetPath?.deletingLastPathComponent())).toUrl()!);
-            } catch let error as NSError {
-                NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
-            }
+            let targetPath = self.fileLinkManager.getTargetPath(path, to: path.deletingLastPathComponent());
+            self.fileLinkManager.linkWith(of: path, with: targetPath);
         }
     }
 }
-

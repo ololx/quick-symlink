@@ -13,9 +13,9 @@ class FinderSync: FIFinderSync {
     let quickSymlinkToolbarItemImage = NSImage(named:NSImage.Name(rawValue: "quick-symlink-toolbar-item-image"));
     
     let copyPathAction = CopyPathAction.init();
-    let pasteLinkAction = PasteLinkAction.init();
-    let replaceWithLinkAction = ReplaceWithLinkAction.init();
-    let createSymlink = CreateLinkAction.init();
+    let pasteLinkAction = PasteLinkAction.init(fileLinkManager: SoftLinkManager.init());
+    let replaceWithLinkAction = ReplaceWithLinkAction.init(fileLinkManager: SoftLinkManager.init());
+    let createSymlink = CreateLinkAction.init(fileLinkManager: SoftLinkManager.init());
     
     override init() {
         super.init()

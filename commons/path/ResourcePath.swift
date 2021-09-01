@@ -50,8 +50,6 @@ public class ResourcePath: Path {
             destinationPath.appendPathComponent(pathFragment);
         }
         
-        //pathFragments!.append(contentsOf: targetPathFragments!);
-        
         return ResourcePath.of(url: destinationPath);
     }
     
