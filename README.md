@@ -2,11 +2,11 @@
 
 The Quick Symlink is a `Finder extension`  which provides a `contextual menu item` for the symbolic links creation on macOS. 
 
-[![status](https://img.shields.io/badge/status-active-active?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.6.0-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/last_release-August_22,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-August_22,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
+[![status](https://img.shields.io/badge/status-active-active?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.8.0-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/last_release-September_02,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-September_02,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
 
 [![license](https://img.shields.io/badge/license-MIT-informational?style=flat-square)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)
 
-[![platform](https://img.shields.io/badge/platform-OS_X_10.11+-important?style=flat-square)](https://en.wikipedia.org/wiki/Computing_platform)
+[![platform](https://img.shields.io/badge/platform-OS_X_10.10+-important?style=flat-square)](https://en.wikipedia.org/wiki/Computing_platform)
 
 ---
 
@@ -55,9 +55,13 @@ This GIF demonstrates how the `Quick Symlink` allows quite simple to copy files 
 ## 🎚 Features
 
 - Create a symbolic links in a several clicks via the context menu instead of the terminal promt:
-  - Select files or folders and create symlink for them.
-  - Copy files or folders and paste symlink somewhere.
+  - Select files or folders and create symlinks for them.
+  - Copy files or folders and paste symlinks somewhere.
   - Copy files or folders, paste them somewhere, and replace them with symlinks.
+
+- Create a hard links in a several clicks via the context menu instead of the terminal promt:
+  - Select files or folders and create hard links for them.
+  - Copy files or folders and paste hard links somewhere.
 
 ### To Do
 
@@ -75,12 +79,12 @@ These instructions allow to get a copy of this project and run it on a local mac
 
 Before using it, make sure that follows software are installed on the local machine:
 
-- **[OS X 10.11+](https://www.apple.com/ru/macos/what-is/)** - the operating system under which the extention is executing.
+- **[OS X 10.10+](https://www.apple.com/ru/macos/what-is/)** - the operating system under which the extention is executing.
 
 If any of the listed programs is not installed, then it can be installed by instruction as described below.
 
-1. #### OS X 10.11+
-    - Install macOS 10.11+  by [this](https://support.apple.com/ht201372) instruction.
+1. #### OS X 10.10+
+    - Install macOS 10.10+  by [this](https://support.apple.com/ht201372) instruction.
 
 ### Installing
 
@@ -105,7 +109,9 @@ In order to install it is quite simple to:
    open quick-symlink.app
    ```
 
-4. Open up `System Preferences > Extensions` and enable the extension `quick-symlink`.
+4. Open up `System Preferences > Extensions` and enable the follows extensions:
+  4.1. `quick-symlink-extension` - for the symlink actions.
+  4.2. `hard-link-actions-extension` - for the hard link actions.
 
 **Otherwise, it's possible to install and remove the extention using the actual extension bundled into the app.**
 
@@ -113,12 +119,14 @@ In order to install it is quite simple to:
 
 ```bash
 pluginkit -a quick-symlink.app/Contents/PlugIns/quick-symlink-extension.appex/
+pluginkit -a quick-symlink.app/Contents/PlugIns/hard-link-action-extension.appex/
 ```
 
 2. To remove it, run this:
 
 ```bash
 pluginkit -r quick-symlink.app/Contents/PlugIns/quick-symlink-extension.appex/
+pluginkit -r quick-symlink.app/Contents/PlugIns/hard-link-action-extension.appex/
 ```
 
 ### Downloading
@@ -144,27 +152,44 @@ This tool allows to:
     <summary>Create symlinks in the current directory</summary>
 1. Select folders or files for which a symbolic link is needed.<br/>
 2. Call the contextual menu by the right-clicking on selected.<br/>
-3. Select menu item `Quick Symlink --> Create symlink for`.<br/>
+3. Select menu item `Symlink actions --> Create symlink for`.<br/>
 </details>
 
 <details close>
     <summary>Create symlinks in another directory</summary>
 1. Select folders or files for which a symbolic link is needed.<br/>
 2. Call the contextual menu by the right-clicking on selected.<br/>
-3. Select menu item `Quick Symlink --> Copy path from here`.<br/>
+3. Select menu item `Symlink actions --> Copy path from here`.<br/>
 4. Go to a destination folder.<br/>
 5. Call the contextual menu by right-clicking on the filder.<br/>
-6. Select menu item `Quick Symlink --> Paste to here`.<br/>
+6. Select menu item `Symlink actions --> Paste to here`.<br/>
 </details>
 
 <details close>
     <summary>Replace objects with symbolic links</summary>
 1. Select folders or files for which a symbolic link is needed.<br/>
 2. Call the contextual menu by the right-clicking on selected.<br/>
-3. Select menu item `Quick Symlink --> Copy to clipboard`.<br/>
+3. Select menu item `Symlink actions --> Copy to clipboard`.<br/>
 4. Go to a destination folder.<br/>
 5. Call the contextual menu by right-clicking on the filder.<br/>
-6. Select menu item `Quick Symlink --> Move it here and replace with a link`.<br/>
+6. Select menu item `Symlink actions --> Move it here and replace with a link`.<br/>
+</details>
+
+<details close>
+    <summary>Create hard links in the current directory</summary>
+1. Select folders or files for which a symbolic link is needed.<br/>
+2. Call the contextual menu by the right-clicking on selected.<br/>
+3. Select menu item `Hard link actions --> Create symlink for`.<br/>
+</details>
+
+<details close>
+    <summary>Create symlinks in another directory</summary>
+1. Select folders or files for which a symbolic link is needed.<br/>
+2. Call the contextual menu by the right-clicking on selected.<br/>
+3. Select menu item `Hard link actions --> Copy path from here`.<br/>
+4. Go to a destination folder.<br/>
+5. Call the contextual menu by right-clicking on the filder.<br/>
+6. Select menu item `Hard link actions --> Paste to here`.<br/>
 </details>
 
 ## 🛠 Built With

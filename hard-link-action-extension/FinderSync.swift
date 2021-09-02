@@ -1,26 +1,26 @@
 //
 //  FinderSync.swift
-//  quick-symlink-contextual-menu
+//  hard-link-action-extension
 //
-//  Created by Alexander A. Kropotin on 07.05.2021.
+//  Created by Alexander A. Kropotin on 02/09/2021.
+//  Copyright © 2021 Alexander A. Kropotin. All rights reserved.
 //
 
 import Cocoa
 import FinderSync
 
 class FinderSync: FIFinderSync {
-    
+
     let quickSymlinkToolbarItemImage = NSImage(named:NSImage.Name(rawValue: "quick-symlink-toolbar-item-image"));
     
     let copyPathAction = CopyPathAction.init();
-    let pasteLinkAction = PasteLinkAction.init(fileLinkManager: SoftLinkManager.init());
-    let replaceWithLinkAction = ReplaceWithLinkAction.init(fileLinkManager: SoftLinkManager.init());
-    let createSymlink = CreateLinkAction.init(fileLinkManager: SoftLinkManager.init());
+    let pasteLinkAction = PasteLinkAction.init(fileLinkManager: HardLinkManager.init());
+    let createSymlink = CreateLinkAction.init(fileLinkManager: HardLinkManager.init());
     
     override init() {
         super.init()
         
-        NSLog("FinderSync() launched from %@", Bundle.main.bundlePath as NSString);
+        NSLog("FinderSync() launched from %@", Bundle.main.bundlePath as NSString)
         
         // Set up the directory we are syncing.
         let finderSync = FIFinderSyncController.default();
@@ -47,23 +47,23 @@ class FinderSync: FIFinderSync {
     override func beginObservingDirectory(at url: URL) {
         // The user is now seeing the container's contents.
         // If they see it in more than one view at a time, we're only told once.
-        NSLog("beginObservingDirectoryAtURL: %@", url.path as NSString);
+        NSLog("beginObservingDirectoryAtURL: %@", url.path as NSString)
     }
     
     
     override func endObservingDirectory(at url: URL) {
         // The user is no longer seeing the container's contents.
-        NSLog("endObservingDirectoryAtURL: %@", url.path as NSString);
+        NSLog("endObservingDirectoryAtURL: %@", url.path as NSString)
     }
     
     // MARK: - Menu and toolbar item support
     
     override var toolbarItemName: String {
-        return  NSLocalizedString("SOFT_LINK_ACTIONS_EXTENTION_NAME", comment: "");
+        return  NSLocalizedString("HARD_LINK_ACTIONS_EXTENTION_NAME", comment: "");
     }
     
     override var toolbarItemToolTip: String {
-        return NSLocalizedString("SOFT_LINK_ACTIONS_EXTENTION_TOOL_TIP", comment: "");
+        return NSLocalizedString("HARD_LINK_ACTIONS_EXTENTION_TOOL_TIP", comment: "");
     }
     
     override var toolbarItemImage: NSImage {
@@ -92,16 +92,8 @@ class FinderSync: FIFinderSync {
         );
         quickSymlinkMenu.addItem(pastleSymlinkFromClipboardMenuItem);
         
-        let replaceFileWithSymlinkFromClipboardMenuItem = NSMenuItem.init(
-            title: NSLocalizedString("REPLACE_WITH_LINK_ACTION_NAME", comment: ""),
-            action: #selector(replaceFileWithSymlinkFromClipboard(_:)),
-            keyEquivalent: ""
-        );
-        quickSymlinkMenu.addItem(replaceFileWithSymlinkFromClipboardMenuItem);
-        
         if (NSPasteboard.init(name: NSPasteboard.Name.init(rawValue: "qs")).string(forType: NSPasteboard.PasteboardType.string) ?? "").isEmpty {
             pastleSymlinkFromClipboardMenuItem.isEnabled = false;
-            replaceFileWithSymlinkFromClipboardMenuItem.isEnabled = false;
         }
         
         if menuKind.rawValue == 3 {
@@ -109,7 +101,7 @@ class FinderSync: FIFinderSync {
         } else {
             let quickSymLinkMainMenu = NSMenu(title: "");
             let quickSymlinkMenuItem = NSMenuItem(
-                title:  NSLocalizedString("SOFT_LINK_ACTIONS_EXTENTION_NAME", comment: ""),
+                title:  NSLocalizedString("HARD_LINK_ACTIONS_EXTENTION_NAME", comment: ""),
                 action: nil,
                 keyEquivalent: ""
             );
@@ -124,10 +116,6 @@ class FinderSync: FIFinderSync {
         self.copyPathAction.execute();
     }
     
-    @IBAction func replaceFileWithSymlinkFromClipboard(_ sender: AnyObject?) {
-        self.replaceWithLinkAction.execute();
-    }
-    
     @IBAction func pastleSymlinkFromClipboard(_ sender: AnyObject?) {
         self.pasteLinkAction.execute();
     }
@@ -136,3 +124,4 @@ class FinderSync: FIFinderSync {
         self.createSymlink.execute();
     }
 }
+

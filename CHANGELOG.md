@@ -10,11 +10,25 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
+## [0.8.0] - 2021-09-02
+
+### Added
+
+- Develop additional `Finder extension`  which allows to create a `hard links` for selected folders and files via contextual menu.
+
+### Changed
+
+- Change build os version to 10.10.
+
+### Fixed
+
+- Fix soft link replace with function.
+
 ## [0.7.0] - 2021-08-22
 
 ### Added
 
-- Added new classes `Path` for working with path's and creating relative path from specified directory.
+- Add new classes `Path` for working with path's and creating relative path from specified directory.
 - Add unit-tests cases for the `Path` class.
 
 ### Changed
@@ -25,13 +39,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ### Changed
 
-- Changed the activity property of some menu items according to the rule:
+- Change the activity property of some menu items according to the rule:
 	- if no object was copied, then the menu items "Paste link to here" an "Move it here and replace with a link"  are not active.
 	- if at least one object was not copied, then the menu items  "Paste link to here" an "Move it here and replace with a link" are inactive.
 
 ### Added
 
-- Added cleaning clipboard after inserting links.
+- Add cleaning clipboard after inserting links.
 
 ## [0.5.0] - 2021-08-02
 
