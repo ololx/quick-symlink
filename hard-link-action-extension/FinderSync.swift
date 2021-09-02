@@ -15,7 +15,6 @@ class FinderSync: FIFinderSync {
     
     let copyPathAction = CopyPathAction.init();
     let pasteLinkAction = PasteLinkAction.init(fileLinkManager: HardLinkManager.init());
-    let replaceWithLinkAction = ReplaceWithLinkAction.init(fileLinkManager: HardLinkManager.init());
     let createSymlink = CreateLinkAction.init(fileLinkManager: HardLinkManager.init());
     
     override init() {
@@ -93,16 +92,8 @@ class FinderSync: FIFinderSync {
         );
         quickSymlinkMenu.addItem(pastleSymlinkFromClipboardMenuItem);
         
-        let replaceFileWithSymlinkFromClipboardMenuItem = NSMenuItem.init(
-            title: NSLocalizedString("REPLACE_WITH_LINK_ACTION_NAME", comment: ""),
-            action: #selector(replaceFileWithSymlinkFromClipboard(_:)),
-            keyEquivalent: ""
-        );
-        quickSymlinkMenu.addItem(replaceFileWithSymlinkFromClipboardMenuItem);
-        
         if (NSPasteboard.init(name: NSPasteboard.Name.init(rawValue: "qs")).string(forType: NSPasteboard.PasteboardType.string) ?? "").isEmpty {
             pastleSymlinkFromClipboardMenuItem.isEnabled = false;
-            replaceFileWithSymlinkFromClipboardMenuItem.isEnabled = false;
         }
         
         if menuKind.rawValue == 3 {
@@ -123,10 +114,6 @@ class FinderSync: FIFinderSync {
     
     @IBAction func copyPathToClipboard(_ sender: AnyObject?) {
         self.copyPathAction.execute();
-    }
-    
-    @IBAction func replaceFileWithSymlinkFromClipboard(_ sender: AnyObject?) {
-        self.replaceWithLinkAction.execute();
     }
     
     @IBAction func pastleSymlinkFromClipboard(_ sender: AnyObject?) {
