@@ -26,6 +26,7 @@
 		A30D4A4D26A0C18B00BA775B /* QuickSymlinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */; };
 		A316477726B7B403001DD969 /* CreateLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316477626B7B403001DD969 /* CreateLinkAction.swift */; };
 		A316477826B7B403001DD969 /* CreateLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316477626B7B403001DD969 /* CreateLinkAction.swift */; };
+		A31904A426E104FA00D7F69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31904A326E104FA00D7F69D /* Assets.xcassets */; };
 		A32EE8E0265D4D05008648AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32EE8DF265D4D05008648AA /* Assets.xcassets */; };
 		A345C9BF26A0B200004FBF0F /* QuickSymlinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */; };
 		A345C9C226A0B30F004FBF0F /* CopyPathAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */; };
@@ -34,6 +35,17 @@
 		A36F9B0626DFAC27009E95CE /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
 		A36F9B0726DFB127009E95CE /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
 		A3D93EB526A09B5A004E068D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3D93EB726A09B5A004E068D /* Localizable.strings */; };
+		A3E4D35526E0FD2900C9F175 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D35426E0FD2900C9F175 /* FinderSync.swift */; };
+		A3E4D35A26E0FD2900C9F175 /* hard-link-action-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3E4D35226E0FD2900C9F175 /* hard-link-action-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A3E4D35E26E0FEE700C9F175 /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
+		A3E4D35F26E0FEEA00C9F175 /* QuickSymlinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */; };
+		A3E4D36026E0FEED00C9F175 /* CopyPathAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */; };
+		A3E4D36126E0FEEF00C9F175 /* PasteLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */; };
+		A3E4D36226E0FEF200C9F175 /* ReplaceWithLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */; };
+		A3E4D36326E0FEF400C9F175 /* CreateLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316477626B7B403001DD969 /* CreateLinkAction.swift */; };
+		A3E4D36426E0FF8100C9F175 /* ResourcePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41926D22116002EEF58 /* ResourcePath.swift */; };
+		A3E4D36526E0FF8600C9F175 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41626D21E39002EEF58 /* Path.swift */; };
+		A3E4D36626E101B000C9F175 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3D93EB726A09B5A004E068D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +63,13 @@
 			remoteGlobalIDString = A30B9ABD265CA68900ACAA63;
 			remoteInfo = "quick-symlink-extension";
 		};
+		A3E4D35826E0FD2900C9F175 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A30B9A9F265CA63300ACAA63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3E4D35126E0FD2900C9F175;
+			remoteInfo = "hard-link-action-extension";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,6 +79,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				A3E4D35A26E0FD2900C9F175 /* hard-link-action-extension.appex in Embed App Extensions */,
 				A30B9AC6265CA68900ACAA63 /* quick-symlink-extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -83,9 +103,9 @@
 		A30B9ABE265CA68900ACAA63 /* quick-symlink-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "quick-symlink-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30B9AC0265CA68900ACAA63 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		A30B9AC2265CA68900ACAA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A30B9AC3265CA68900ACAA63 /* quick_symlink_extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = quick_symlink_extension.entitlements; sourceTree = "<group>"; };
 		A30B9ACB265CA78600ACAA63 /* quick-symlink-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "quick-symlink-extension.entitlements"; sourceTree = "<group>"; };
 		A316477626B7B403001DD969 /* CreateLinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLinkAction.swift; sourceTree = "<group>"; };
+		A31904A326E104FA00D7F69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A32EE8DF265D4D05008648AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSymlinkAction.swift; sourceTree = "<group>"; };
 		A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPathAction.swift; sourceTree = "<group>"; };
@@ -99,6 +119,10 @@
 		A3D93EB826A09B61004E068D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A3D93EB926A09B72004E068D /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A3D93EBA26A09B73004E068D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A3E4D35226E0FD2900C9F175 /* hard-link-action-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "hard-link-action-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3E4D35426E0FD2900C9F175 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		A3E4D35626E0FD2900C9F175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3E4D35726E0FD2900C9F175 /* hard-link-action-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "hard-link-action-extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +141,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A30B9ABB265CA68900ACAA63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3E4D34F26E0FD2900C9F175 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -164,6 +195,7 @@
 				A30B9AA9265CA63300ACAA63 /* quick-symlink */,
 				A30B9ABF265CA68900ACAA63 /* quick-symlink-extension */,
 				A307B42526D255FB002EEF58 /* quick-symlink-tests */,
+				A3E4D35326E0FD2900C9F175 /* hard-link-action-extension */,
 				A30B9AA8265CA63300ACAA63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -174,6 +206,7 @@
 				A30B9AA7265CA63300ACAA63 /* quick-symlink.app */,
 				A30B9ABE265CA68900ACAA63 /* quick-symlink-extension.appex */,
 				A307B42426D255FB002EEF58 /* quick-symlink-tests.xctest */,
+				A3E4D35226E0FD2900C9F175 /* hard-link-action-extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,7 +231,6 @@
 				A30B9AC0265CA68900ACAA63 /* FinderSync.swift */,
 				A32EE8DF265D4D05008648AA /* Assets.xcassets */,
 				A30B9AC2265CA68900ACAA63 /* Info.plist */,
-				A30B9AC3265CA68900ACAA63 /* quick_symlink_extension.entitlements */,
 			);
 			path = "quick-symlink-extension";
 			sourceTree = "<group>";
@@ -219,6 +251,17 @@
 				A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */,
 			);
 			path = link;
+			sourceTree = "<group>";
+		};
+		A3E4D35326E0FD2900C9F175 /* hard-link-action-extension */ = {
+			isa = PBXGroup;
+			children = (
+				A3E4D35426E0FD2900C9F175 /* FinderSync.swift */,
+				A3E4D35626E0FD2900C9F175 /* Info.plist */,
+				A3E4D35726E0FD2900C9F175 /* hard-link-action-extension.entitlements */,
+				A31904A326E104FA00D7F69D /* Assets.xcassets */,
+			);
+			path = "hard-link-action-extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +298,7 @@
 			);
 			dependencies = (
 				A30B9AC5265CA68900ACAA63 /* PBXTargetDependency */,
+				A3E4D35926E0FD2900C9F175 /* PBXTargetDependency */,
 			);
 			name = "quick-symlink";
 			productName = "quick-symlink";
@@ -276,6 +320,23 @@
 			name = "quick-symlink-extension";
 			productName = "quick-symlink-extension";
 			productReference = A30B9ABE265CA68900ACAA63 /* quick-symlink-extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		A3E4D35126E0FD2900C9F175 /* hard-link-action-extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3E4D35B26E0FD2900C9F175 /* Build configuration list for PBXNativeTarget "hard-link-action-extension" */;
+			buildPhases = (
+				A3E4D34E26E0FD2900C9F175 /* Sources */,
+				A3E4D34F26E0FD2900C9F175 /* Frameworks */,
+				A3E4D35026E0FD2900C9F175 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hard-link-action-extension";
+			productName = "hard-link-action-extension";
+			productReference = A3E4D35226E0FD2900C9F175 /* hard-link-action-extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -306,6 +367,10 @@
 							};
 						};
 					};
+					A3E4D35126E0FD2900C9F175 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = A30B9AA2265CA63300ACAA63 /* Build configuration list for PBXProject "quick-symlink" */;
@@ -326,6 +391,7 @@
 				A30B9AA6265CA63300ACAA63 /* quick-symlink */,
 				A30B9ABD265CA68900ACAA63 /* quick-symlink-extension */,
 				A307B42326D255FB002EEF58 /* quick-symlink-tests */,
+				A3E4D35126E0FD2900C9F175 /* hard-link-action-extension */,
 			);
 		};
 /* End PBXProject section */
@@ -353,6 +419,15 @@
 			files = (
 				A32EE8E0265D4D05008648AA /* Assets.xcassets in Resources */,
 				A3D93EB526A09B5A004E068D /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3E4D35026E0FD2900C9F175 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A31904A426E104FA00D7F69D /* Assets.xcassets in Resources */,
+				A3E4D36626E101B000C9F175 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +477,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A3E4D34E26E0FD2900C9F175 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E4D36226E0FEF200C9F175 /* ReplaceWithLinkAction.swift in Sources */,
+				A3E4D36326E0FEF400C9F175 /* CreateLinkAction.swift in Sources */,
+				A3E4D36426E0FF8100C9F175 /* ResourcePath.swift in Sources */,
+				A3E4D35526E0FD2900C9F175 /* FinderSync.swift in Sources */,
+				A3E4D36026E0FEED00C9F175 /* CopyPathAction.swift in Sources */,
+				A3E4D35F26E0FEEA00C9F175 /* QuickSymlinkAction.swift in Sources */,
+				A3E4D36126E0FEEF00C9F175 /* PasteLinkAction.swift in Sources */,
+				A3E4D36526E0FF8600C9F175 /* Path.swift in Sources */,
+				A3E4D35E26E0FEE700C9F175 /* FileLinkManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -414,6 +505,11 @@
 			isa = PBXTargetDependency;
 			target = A30B9ABD265CA68900ACAA63 /* quick-symlink-extension */;
 			targetProxy = A30B9AC4265CA68900ACAA63 /* PBXContainerItemProxy */;
+		};
+		A3E4D35926E0FD2900C9F175 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A3E4D35126E0FD2900C9F175 /* hard-link-action-extension */;
+			targetProxy = A3E4D35826E0FD2900C9F175 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -452,7 +548,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "quick-symlink-tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink-tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -468,7 +564,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "quick-symlink-tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink-tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -525,7 +621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -577,7 +673,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -594,7 +690,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "quick-symlink/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -611,7 +707,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "quick-symlink/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -626,7 +722,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "quick-symlink-extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.quick-symlink-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -642,8 +738,40 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "quick-symlink-extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.quick-symlink-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		A3E4D35C26E0FD2900C9F175 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "hard-link-action-extension/hard-link-action-extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "hard-link-action-extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.hard-link-action-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		A3E4D35D26E0FD2900C9F175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "hard-link-action-extension/hard-link-action-extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "hard-link-action-extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.hard-link-action-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -685,6 +813,15 @@
 			buildConfigurations = (
 				A30B9AC8265CA68900ACAA63 /* Debug */,
 				A30B9AC9265CA68900ACAA63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3E4D35B26E0FD2900C9F175 /* Build configuration list for PBXNativeTarget "hard-link-action-extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3E4D35C26E0FD2900C9F175 /* Debug */,
+				A3E4D35D26E0FD2900C9F175 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,10 +7,16 @@
 */
 
 /* Class = "NSMenuItem"; */
-"EXTENTION_NAME" = "Quick Symlink";
+"SOFT_LINK_ACTIONS_EXTENTION_NAME" = "Soft link actions";
 
 /* Class = "NSMenuItem"; */
-"EXTENTION_TOOL_TIP" = "Create symbolic links for selected files and folders";
+"SOFT_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Create symbolic links for selected files and folders";
+
+/* Class = "NSMenuItem"; */
+"HARD_LINK_ACTIONS_EXTENTION_NAME" = "Hard link actions";
+
+/* Class = "NSMenuItem"; */
+"HARD_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Create hard links for selected files and folders";
 
 /* Class = "NSMenuItem"; */
 "COPY_PATH_ACTION_NAME" = "Copy path from here";
