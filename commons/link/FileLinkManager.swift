@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FinderSync
 
 public protocol FileLinkManager {
     
@@ -65,8 +66,13 @@ public class SoftLinkManager: FileLinkManager {
 public class HardLinkManager: FileLinkManager {
     
     public func linkWith(of: URL!, with: URL!) {
+        
+        let pasteboard = NSPasteboard.general;
+        pasteboard.declareTypes([NSPasteboard.PasteboardType.string], owner: nil);
+        
         do {
-            try FileManager.default.createSymbolicLink(at: with!, withDestinationURL: ResourcePath.of(url: of).relativize(to: ResourcePath.of(url: with?.deletingLastPathComponent())).toUrl()!);
+            try FileManager.default.linkItem(at: of, to: with);
+    
         } catch let error as NSError {
             NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
         }
@@ -75,7 +81,7 @@ public class HardLinkManager: FileLinkManager {
     public func replaceWith(of: URL!, with: URL!) {
         do {
             try FileManager.default.moveItem(at: of, to: with);
-            try FileManager.default.linkItem(at: with, to: ResourcePath.of(url: of).relativize(to: ResourcePath.of(url: with.deletingLastPathComponent())).toUrl()!);
+            try FileManager.default.linkItem(at: with, to: of);
         } catch let error as NSError {
             NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
         }
