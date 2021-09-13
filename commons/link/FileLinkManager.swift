@@ -66,13 +66,8 @@ public class SoftLinkManager: FileLinkManager {
 public class HardLinkManager: FileLinkManager {
     
     public func linkWith(of: URL!, with: URL!) {
-        
-        let pasteboard = NSPasteboard.general;
-        pasteboard.declareTypes([NSPasteboard.PasteboardType.string], owner: nil);
-        
         do {
             try FileManager.default.linkItem(at: of, to: with);
-    
         } catch let error as NSError {
             NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
         }

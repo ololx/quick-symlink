@@ -28,6 +28,7 @@
 		A316477826B7B403001DD969 /* CreateLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316477626B7B403001DD969 /* CreateLinkAction.swift */; };
 		A31904A426E104FA00D7F69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31904A326E104FA00D7F69D /* Assets.xcassets */; };
 		A32EE8E0265D4D05008648AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32EE8DF265D4D05008648AA /* Assets.xcassets */; };
+		A34185F126EF767900224992 /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
 		A345C9BF26A0B200004FBF0F /* QuickSymlinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */; };
 		A345C9C226A0B30F004FBF0F /* CopyPathAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */; };
 		A345C9C526A0B49C004FBF0F /* PasteLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */; };
@@ -439,6 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A307B43026D257C5002EEF58 /* ResourcePath.swift in Sources */,
+				A34185F126EF767900224992 /* FileLinkManager.swift in Sources */,
 				A307B42F26D2563B002EEF58 /* ResourcePathTest.swift in Sources */,
 				A307B43126D257CA002EEF58 /* Path.swift in Sources */,
 			);

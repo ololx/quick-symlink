@@ -10,6 +10,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
+## [0.8.1] - 2021-09-13
+
+### Fixed
+
+- Fix a bug that led to fatal error: `Can't remove last element from an empty collection`.
+
+### Added
+
+- Added the ability to create links from the `Finder` menu without selected objects.
+
 ## [0.8.0] - 2021-09-02
 
 ### Added

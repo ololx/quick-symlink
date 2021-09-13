@@ -19,10 +19,14 @@ public class CopyPathAction: QuickSymlinkAction {
     
     public func execute() {
         //Get all selected path
-        guard let target = self.finderController.selectedItemURLs() else {
+        guard var target = self.finderController.selectedItemURLs() else {
             NSLog("FinderSync() failed to obtain targeted URLs: %@");
             
             return;
+        }
+        
+        if (target.isEmpty) {
+            target.append(self.finderController.targetedURL()!);
         }
         
         // Append all selected paths to string
@@ -31,7 +35,9 @@ public class CopyPathAction: QuickSymlinkAction {
             paths.append(contentsOf: path.relativePath);
             paths.append(";");
         }
-        paths.removeLast();
+        if (!paths.isEmpty) {
+            paths.removeLast();
+        }
         
         //Copy path list to clipboard
         let pasteboard = NSPasteboard.init(name: NSPasteboard.Name.init(rawValue: "qs"));

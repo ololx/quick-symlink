@@ -37,7 +37,7 @@ class ResourcePathTest: XCTestCase {
         XCTAssert(relativePath.toUriString() == "./../..", "The relative path is wrong");
     }
     
-    func test_relativize_whenCurrentDirectoryAndOtherDirectoryAreNestedToGeneralDirectoryy_thenReturnPathWithJumpsAboveOtherDirectoryAndPartOfCurrentDirectory() {
+    func test_relativize_whenCurrentDirectoryAndOtherDirectoryAreNestedToGeneralDirectory_thenReturnPathWithJumpsAboveOtherDirectoryAndPartOfCurrentDirectory() {
         let currentUri: URL = URL.init(string: "/a/b/c1/d1")!;
         let otherUri: URL = URL.init(string: "/a/b/c2/d2")!;
         

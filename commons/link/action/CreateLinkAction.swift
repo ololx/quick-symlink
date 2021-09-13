@@ -32,5 +32,11 @@ public class CreateLinkAction: QuickSymlinkAction {
             let targetPath = self.fileLinkManager.getTargetPath(path, to: path.deletingLastPathComponent());
             self.fileLinkManager.linkWith(of: path, with: targetPath);
         }
+        
+        if (target.isEmpty) {
+            let path = self.finderController.targetedURL()!;
+            let targetPath = self.fileLinkManager.getTargetPath(path, to: path);
+            self.fileLinkManager.linkWith(of: path, with: targetPath);
+        }
     }
 }
