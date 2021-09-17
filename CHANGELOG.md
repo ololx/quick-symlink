@@ -10,6 +10,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
+## [0.9.0] - 2021-09-17
+
+### Changed
+
+- Change the extention boubdle name from `quick-symlink-extention to `symlink actions`.
+- Change the module name `quick-symlink-extention to `soft-link-actions-name`.
+
 ## [0.8.1] - 2021-09-13
 
 ### Fixed

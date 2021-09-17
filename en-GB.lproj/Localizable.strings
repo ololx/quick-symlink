@@ -1,10 +1,10 @@
-/* 
-  Localizable.strings
-  quick-symlink
-
-  Created by Alexander A. Kropotin on 15/07/2021.
-  Copyright © 2021 Alexander A. Kropotin. All rights reserved.
-*/
+/*
+ Localizable.strings
+ quick-symlink
+ 
+ Created by Alexander A. Kropotin on 15/07/2021.
+ Copyright © 2021 Alexander A. Kropotin. All rights reserved.
+ */
 
 /* Class = "NSMenuItem"; */
 "SOFT_LINK_ACTIONS_EXTENTION_NAME" = "Действия с симлинками";
@@ -29,3 +29,5 @@
 
 /* Class = "NSMenuItem"; */
 "CREATE_LINK_ACTION_NAME" = "Создать ссылку";
+
+
