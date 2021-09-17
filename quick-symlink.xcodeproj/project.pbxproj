@@ -38,6 +38,9 @@
 		A3DC975226F4662F00B506D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC975626F4662F00B506D4 /* Localizable.strings */; };
 		A3DC975326F4662F00B506D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC975626F4662F00B506D4 /* Localizable.strings */; };
 		A3DC975426F4662F00B506D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC975626F4662F00B506D4 /* Localizable.strings */; };
+		A3DC975C26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */; };
+		A3DC975D26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */; };
+		A3DC975E26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */; };
 		A3E4D35526E0FD2900C9F175 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D35426E0FD2900C9F175 /* FinderSync.swift */; };
 		A3E4D35A26E0FD2900C9F175 /* hard-link-actions-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3E4D35226E0FD2900C9F175 /* hard-link-actions-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A3E4D35E26E0FEE700C9F175 /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
@@ -121,6 +124,7 @@
 		A3DC975726F4663100B506D4 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A3DC975826F4663200B506D4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A3DC975926F4663F00B506D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSymlinkDefaults.swift; sourceTree = "<group>"; };
 		A3E4D35226E0FD2900C9F175 /* hard-link-actions-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "hard-link-actions-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E4D35426E0FD2900C9F175 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		A3E4D35626E0FD2900C9F175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 		A345C9BD26A0B12C004FBF0F /* commons */ = {
 			isa = PBXGroup;
 			children = (
+				A3DC975A26F4A36200B506D4 /* defaults */,
 				A36F9B0426DFAA4B009E95CE /* link */,
 				A307B41526D21E23002EEF58 /* path */,
 			);
@@ -253,6 +258,14 @@
 				A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */,
 			);
 			path = link;
+			sourceTree = "<group>";
+		};
+		A3DC975A26F4A36200B506D4 /* defaults */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */,
+			);
+			path = defaults;
 			sourceTree = "<group>";
 		};
 		A3E4D35326E0FD2900C9F175 /* hard-link-actions-extension */ = {
@@ -451,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DC975C26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */,
 				A307B41A26D22116002EEF58 /* ResourcePath.swift in Sources */,
 				A345C9C826A0B552004FBF0F /* ReplaceWithLinkAction.swift in Sources */,
 				A316477726B7B403001DD969 /* CreateLinkAction.swift in Sources */,
@@ -468,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DC975D26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */,
 				A30B9AC1265CA68900ACAA63 /* FinderSync.swift in Sources */,
 				A307B41826D21E39002EEF58 /* Path.swift in Sources */,
 				A307B41B26D22116002EEF58 /* ResourcePath.swift in Sources */,
@@ -484,6 +499,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DC975E26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */,
 				A3E4D36226E0FEF200C9F175 /* ReplaceWithLinkAction.swift in Sources */,
 				A3E4D36326E0FEF400C9F175 /* CreateLinkAction.swift in Sources */,
 				A3E4D36426E0FF8100C9F175 /* ResourcePath.swift in Sources */,
