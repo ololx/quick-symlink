@@ -39,7 +39,7 @@
 		A3DC975326F4662F00B506D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC975626F4662F00B506D4 /* Localizable.strings */; };
 		A3DC975426F4662F00B506D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC975626F4662F00B506D4 /* Localizable.strings */; };
 		A3E4D35526E0FD2900C9F175 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D35426E0FD2900C9F175 /* FinderSync.swift */; };
-		A3E4D35A26E0FD2900C9F175 /* hard-link-action-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3E4D35226E0FD2900C9F175 /* hard-link-action-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A3E4D35A26E0FD2900C9F175 /* hard-link-actions-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3E4D35226E0FD2900C9F175 /* hard-link-actions-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A3E4D35E26E0FEE700C9F175 /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
 		A3E4D35F26E0FEEA00C9F175 /* QuickSymlinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */; };
 		A3E4D36026E0FEED00C9F175 /* CopyPathAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */; };
@@ -81,7 +81,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A3E4D35A26E0FD2900C9F175 /* hard-link-action-extension.appex in Embed App Extensions */,
+				A3E4D35A26E0FD2900C9F175 /* hard-link-actions-extension.appex in Embed App Extensions */,
 				A30B9AC6265CA68900ACAA63 /* soft-link-actions-extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -121,10 +121,10 @@
 		A3DC975726F4663100B506D4 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A3DC975826F4663200B506D4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A3DC975926F4663F00B506D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A3E4D35226E0FD2900C9F175 /* hard-link-action-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "hard-link-action-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3E4D35226E0FD2900C9F175 /* hard-link-actions-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "hard-link-actions-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E4D35426E0FD2900C9F175 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		A3E4D35626E0FD2900C9F175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3E4D35726E0FD2900C9F175 /* hard-link-action-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "hard-link-action-extension.entitlements"; sourceTree = "<group>"; };
+		A3E4D35726E0FD2900C9F175 /* hard-link-actions-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "hard-link-actions-extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,7 +197,7 @@
 				A30B9AA9265CA63300ACAA63 /* quick-symlink */,
 				A30B9ABF265CA68900ACAA63 /* soft-link-actions-extension */,
 				A307B42526D255FB002EEF58 /* quick-symlink-tests */,
-				A3E4D35326E0FD2900C9F175 /* hard-link-action-extension */,
+				A3E4D35326E0FD2900C9F175 /* hard-link-actions-extension */,
 				A30B9AA8265CA63300ACAA63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 				A30B9AA7265CA63300ACAA63 /* quick-symlink.app */,
 				A30B9ABE265CA68900ACAA63 /* soft-link-actions-extension.appex */,
 				A307B42426D255FB002EEF58 /* quick-symlink-tests.xctest */,
-				A3E4D35226E0FD2900C9F175 /* hard-link-action-extension.appex */,
+				A3E4D35226E0FD2900C9F175 /* hard-link-actions-extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,15 +255,15 @@
 			path = link;
 			sourceTree = "<group>";
 		};
-		A3E4D35326E0FD2900C9F175 /* hard-link-action-extension */ = {
+		A3E4D35326E0FD2900C9F175 /* hard-link-actions-extension */ = {
 			isa = PBXGroup;
 			children = (
 				A3E4D35426E0FD2900C9F175 /* FinderSync.swift */,
 				A3E4D35626E0FD2900C9F175 /* Info.plist */,
-				A3E4D35726E0FD2900C9F175 /* hard-link-action-extension.entitlements */,
+				A3E4D35726E0FD2900C9F175 /* hard-link-actions-extension.entitlements */,
 				A31904A326E104FA00D7F69D /* Assets.xcassets */,
 			);
-			path = "hard-link-action-extension";
+			path = "hard-link-actions-extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,9 +324,9 @@
 			productReference = A30B9ABE265CA68900ACAA63 /* soft-link-actions-extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		A3E4D35126E0FD2900C9F175 /* hard-link-action-extension */ = {
+		A3E4D35126E0FD2900C9F175 /* hard-link-actions-extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A3E4D35B26E0FD2900C9F175 /* Build configuration list for PBXNativeTarget "hard-link-action-extension" */;
+			buildConfigurationList = A3E4D35B26E0FD2900C9F175 /* Build configuration list for PBXNativeTarget "hard-link-actions-extension" */;
 			buildPhases = (
 				A3E4D34E26E0FD2900C9F175 /* Sources */,
 				A3E4D34F26E0FD2900C9F175 /* Frameworks */,
@@ -336,9 +336,9 @@
 			);
 			dependencies = (
 			);
-			name = "hard-link-action-extension";
+			name = "hard-link-actions-extension";
 			productName = "hard-link-action-extension";
-			productReference = A3E4D35226E0FD2900C9F175 /* hard-link-action-extension.appex */;
+			productReference = A3E4D35226E0FD2900C9F175 /* hard-link-actions-extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -392,7 +392,7 @@
 				A30B9AA6265CA63300ACAA63 /* quick-symlink */,
 				A30B9ABD265CA68900ACAA63 /* soft-link-actions-extension */,
 				A307B42326D255FB002EEF58 /* quick-symlink-tests */,
-				A3E4D35126E0FD2900C9F175 /* hard-link-action-extension */,
+				A3E4D35126E0FD2900C9F175 /* hard-link-actions-extension */,
 			);
 		};
 /* End PBXProject section */
@@ -511,7 +511,7 @@
 		};
 		A3E4D35926E0FD2900C9F175 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A3E4D35126E0FD2900C9F175 /* hard-link-action-extension */;
+			target = A3E4D35126E0FD2900C9F175 /* hard-link-actions-extension */;
 			targetProxy = A3E4D35826E0FD2900C9F175 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -751,13 +751,13 @@
 		A3E4D35C26E0FD2900C9F175 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "hard-link-action-extension/hard-link-action-extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "hard-link-actions-extension/hard-link-actions-extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "hard-link-action-extension/Info.plist";
+				INFOPLIST_FILE = "hard-link-actions-extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.hard-link-action-extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.hard-link-actions-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -767,13 +767,13 @@
 		A3E4D35D26E0FD2900C9F175 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "hard-link-action-extension/hard-link-action-extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "hard-link-actions-extension/hard-link-actions-extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "hard-link-action-extension/Info.plist";
+				INFOPLIST_FILE = "hard-link-actions-extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.hard-link-action-extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.hard-link-actions-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -819,7 +819,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A3E4D35B26E0FD2900C9F175 /* Build configuration list for PBXNativeTarget "hard-link-action-extension" */ = {
+		A3E4D35B26E0FD2900C9F175 /* Build configuration list for PBXNativeTarget "hard-link-actions-extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A3E4D35C26E0FD2900C9F175 /* Debug */,
