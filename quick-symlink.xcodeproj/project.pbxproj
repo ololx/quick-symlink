@@ -19,7 +19,7 @@
 		A30B9AAF265CA63300ACAA63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30B9AAE265CA63300ACAA63 /* Assets.xcassets */; };
 		A30B9AB2265CA63300ACAA63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30B9AB0265CA63300ACAA63 /* Main.storyboard */; };
 		A30B9AC1265CA68900ACAA63 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30B9AC0265CA68900ACAA63 /* FinderSync.swift */; };
-		A30B9AC6265CA68900ACAA63 /* quick-symlink-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A30B9ABE265CA68900ACAA63 /* quick-symlink-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A30B9AC6265CA68900ACAA63 /* soft-link-actions-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A30B9ABE265CA68900ACAA63 /* soft-link-actions-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A30D4A4A26A0C14400BA775B /* CopyPathAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */; };
 		A30D4A4B26A0C14400BA775B /* PasteLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */; };
 		A30D4A4C26A0C14400BA775B /* ReplaceWithLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */; };
@@ -35,9 +35,14 @@
 		A345C9C826A0B552004FBF0F /* ReplaceWithLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */; };
 		A36F9B0626DFAC27009E95CE /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
 		A36F9B0726DFB127009E95CE /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
-		A3D93EB526A09B5A004E068D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3D93EB726A09B5A004E068D /* Localizable.strings */; };
+		A3DC975226F4662F00B506D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC975626F4662F00B506D4 /* Localizable.strings */; };
+		A3DC975326F4662F00B506D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC975626F4662F00B506D4 /* Localizable.strings */; };
+		A3DC975426F4662F00B506D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC975626F4662F00B506D4 /* Localizable.strings */; };
+		A3DC975C26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */; };
+		A3DC975D26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */; };
+		A3DC975E26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */; };
 		A3E4D35526E0FD2900C9F175 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D35426E0FD2900C9F175 /* FinderSync.swift */; };
-		A3E4D35A26E0FD2900C9F175 /* hard-link-action-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3E4D35226E0FD2900C9F175 /* hard-link-action-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A3E4D35A26E0FD2900C9F175 /* hard-link-actions-extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A3E4D35226E0FD2900C9F175 /* hard-link-actions-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A3E4D35E26E0FEE700C9F175 /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
 		A3E4D35F26E0FEEA00C9F175 /* QuickSymlinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */; };
 		A3E4D36026E0FEED00C9F175 /* CopyPathAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */; };
@@ -46,7 +51,6 @@
 		A3E4D36326E0FEF400C9F175 /* CreateLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316477626B7B403001DD969 /* CreateLinkAction.swift */; };
 		A3E4D36426E0FF8100C9F175 /* ResourcePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41926D22116002EEF58 /* ResourcePath.swift */; };
 		A3E4D36526E0FF8600C9F175 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = A307B41626D21E39002EEF58 /* Path.swift */; };
-		A3E4D36626E101B000C9F175 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3D93EB726A09B5A004E068D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +84,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A3E4D35A26E0FD2900C9F175 /* hard-link-action-extension.appex in Embed App Extensions */,
-				A30B9AC6265CA68900ACAA63 /* quick-symlink-extension.appex in Embed App Extensions */,
+				A3E4D35A26E0FD2900C9F175 /* hard-link-actions-extension.appex in Embed App Extensions */,
+				A30B9AC6265CA68900ACAA63 /* soft-link-actions-extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,10 +105,10 @@
 		A30B9AB1265CA63300ACAA63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A30B9AB3265CA63300ACAA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30B9AB4265CA63300ACAA63 /* quick_symlink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = quick_symlink.entitlements; sourceTree = "<group>"; };
-		A30B9ABE265CA68900ACAA63 /* quick-symlink-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "quick-symlink-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30B9ABE265CA68900ACAA63 /* soft-link-actions-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "soft-link-actions-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30B9AC0265CA68900ACAA63 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		A30B9AC2265CA68900ACAA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A30B9ACB265CA78600ACAA63 /* quick-symlink-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "quick-symlink-extension.entitlements"; sourceTree = "<group>"; };
+		A30B9ACB265CA78600ACAA63 /* soft-link-actions-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "soft-link-actions-extension.entitlements"; sourceTree = "<group>"; };
 		A316477626B7B403001DD969 /* CreateLinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLinkAction.swift; sourceTree = "<group>"; };
 		A31904A326E104FA00D7F69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A32EE8DF265D4D05008648AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,17 +117,18 @@
 		A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteLinkAction.swift; sourceTree = "<group>"; };
 		A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceWithLinkAction.swift; sourceTree = "<group>"; };
 		A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLinkManager.swift; sourceTree = "<group>"; };
-		A3D93EA426A08EDF004E068D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		A3D93EA826A0904F004E068D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		A3D93EA926A09053004E068D /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
-		A3D93EB626A09B5A004E068D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A3D93EB826A09B61004E068D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A3D93EB926A09B72004E068D /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		A3D93EBA26A09B73004E068D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A3E4D35226E0FD2900C9F175 /* hard-link-action-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "hard-link-action-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3DC974B26F4659200B506D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		A3DC974C26F465C400B506D4 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
+		A3DC974D26F465CA00B506D4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		A3DC975526F4662F00B506D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A3DC975726F4663100B506D4 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A3DC975826F4663200B506D4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A3DC975926F4663F00B506D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSymlinkDefaults.swift; sourceTree = "<group>"; };
+		A3E4D35226E0FD2900C9F175 /* hard-link-actions-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "hard-link-actions-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3E4D35426E0FD2900C9F175 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		A3E4D35626E0FD2900C9F175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3E4D35726E0FD2900C9F175 /* hard-link-action-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "hard-link-action-extension.entitlements"; sourceTree = "<group>"; };
+		A3E4D35726E0FD2900C9F175 /* hard-link-actions-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "hard-link-actions-extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,12 +196,12 @@
 		A30B9A9E265CA63300ACAA63 = {
 			isa = PBXGroup;
 			children = (
+				A3DC975626F4662F00B506D4 /* Localizable.strings */,
 				A345C9BD26A0B12C004FBF0F /* commons */,
-				A3D93EB726A09B5A004E068D /* Localizable.strings */,
 				A30B9AA9265CA63300ACAA63 /* quick-symlink */,
-				A30B9ABF265CA68900ACAA63 /* quick-symlink-extension */,
+				A30B9ABF265CA68900ACAA63 /* soft-link-actions-extension */,
 				A307B42526D255FB002EEF58 /* quick-symlink-tests */,
-				A3E4D35326E0FD2900C9F175 /* hard-link-action-extension */,
+				A3E4D35326E0FD2900C9F175 /* hard-link-actions-extension */,
 				A30B9AA8265CA63300ACAA63 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -205,9 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				A30B9AA7265CA63300ACAA63 /* quick-symlink.app */,
-				A30B9ABE265CA68900ACAA63 /* quick-symlink-extension.appex */,
+				A30B9ABE265CA68900ACAA63 /* soft-link-actions-extension.appex */,
 				A307B42426D255FB002EEF58 /* quick-symlink-tests.xctest */,
-				A3E4D35226E0FD2900C9F175 /* hard-link-action-extension.appex */,
+				A3E4D35226E0FD2900C9F175 /* hard-link-actions-extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,20 +230,21 @@
 			path = "quick-symlink";
 			sourceTree = "<group>";
 		};
-		A30B9ABF265CA68900ACAA63 /* quick-symlink-extension */ = {
+		A30B9ABF265CA68900ACAA63 /* soft-link-actions-extension */ = {
 			isa = PBXGroup;
 			children = (
-				A30B9ACB265CA78600ACAA63 /* quick-symlink-extension.entitlements */,
+				A30B9ACB265CA78600ACAA63 /* soft-link-actions-extension.entitlements */,
 				A30B9AC0265CA68900ACAA63 /* FinderSync.swift */,
 				A32EE8DF265D4D05008648AA /* Assets.xcassets */,
 				A30B9AC2265CA68900ACAA63 /* Info.plist */,
 			);
-			path = "quick-symlink-extension";
+			path = "soft-link-actions-extension";
 			sourceTree = "<group>";
 		};
 		A345C9BD26A0B12C004FBF0F /* commons */ = {
 			isa = PBXGroup;
 			children = (
+				A3DC975A26F4A36200B506D4 /* defaults */,
 				A36F9B0426DFAA4B009E95CE /* link */,
 				A307B41526D21E23002EEF58 /* path */,
 			);
@@ -254,15 +260,23 @@
 			path = link;
 			sourceTree = "<group>";
 		};
-		A3E4D35326E0FD2900C9F175 /* hard-link-action-extension */ = {
+		A3DC975A26F4A36200B506D4 /* defaults */ = {
+			isa = PBXGroup;
+			children = (
+				A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */,
+			);
+			path = defaults;
+			sourceTree = "<group>";
+		};
+		A3E4D35326E0FD2900C9F175 /* hard-link-actions-extension */ = {
 			isa = PBXGroup;
 			children = (
 				A3E4D35426E0FD2900C9F175 /* FinderSync.swift */,
 				A3E4D35626E0FD2900C9F175 /* Info.plist */,
-				A3E4D35726E0FD2900C9F175 /* hard-link-action-extension.entitlements */,
+				A3E4D35726E0FD2900C9F175 /* hard-link-actions-extension.entitlements */,
 				A31904A326E104FA00D7F69D /* Assets.xcassets */,
 			);
-			path = "hard-link-action-extension";
+			path = "hard-link-actions-extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,9 +320,9 @@
 			productReference = A30B9AA7265CA63300ACAA63 /* quick-symlink.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A30B9ABD265CA68900ACAA63 /* quick-symlink-extension */ = {
+		A30B9ABD265CA68900ACAA63 /* soft-link-actions-extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A30B9AC7265CA68900ACAA63 /* Build configuration list for PBXNativeTarget "quick-symlink-extension" */;
+			buildConfigurationList = A30B9AC7265CA68900ACAA63 /* Build configuration list for PBXNativeTarget "soft-link-actions-extension" */;
 			buildPhases = (
 				A30B9ABA265CA68900ACAA63 /* Sources */,
 				A30B9ABB265CA68900ACAA63 /* Frameworks */,
@@ -318,14 +332,14 @@
 			);
 			dependencies = (
 			);
-			name = "quick-symlink-extension";
+			name = "soft-link-actions-extension";
 			productName = "quick-symlink-extension";
-			productReference = A30B9ABE265CA68900ACAA63 /* quick-symlink-extension.appex */;
+			productReference = A30B9ABE265CA68900ACAA63 /* soft-link-actions-extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		A3E4D35126E0FD2900C9F175 /* hard-link-action-extension */ = {
+		A3E4D35126E0FD2900C9F175 /* hard-link-actions-extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A3E4D35B26E0FD2900C9F175 /* Build configuration list for PBXNativeTarget "hard-link-action-extension" */;
+			buildConfigurationList = A3E4D35B26E0FD2900C9F175 /* Build configuration list for PBXNativeTarget "hard-link-actions-extension" */;
 			buildPhases = (
 				A3E4D34E26E0FD2900C9F175 /* Sources */,
 				A3E4D34F26E0FD2900C9F175 /* Frameworks */,
@@ -335,9 +349,9 @@
 			);
 			dependencies = (
 			);
-			name = "hard-link-action-extension";
+			name = "hard-link-actions-extension";
 			productName = "hard-link-action-extension";
-			productReference = A3E4D35226E0FD2900C9F175 /* hard-link-action-extension.appex */;
+			productReference = A3E4D35226E0FD2900C9F175 /* hard-link-actions-extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -379,10 +393,9 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
-				ru,
 				"en-GB",
+				ru,
 			);
 			mainGroup = A30B9A9E265CA63300ACAA63;
 			productRefGroup = A30B9AA8265CA63300ACAA63 /* Products */;
@@ -390,9 +403,9 @@
 			projectRoot = "";
 			targets = (
 				A30B9AA6265CA63300ACAA63 /* quick-symlink */,
-				A30B9ABD265CA68900ACAA63 /* quick-symlink-extension */,
+				A30B9ABD265CA68900ACAA63 /* soft-link-actions-extension */,
 				A307B42326D255FB002EEF58 /* quick-symlink-tests */,
-				A3E4D35126E0FD2900C9F175 /* hard-link-action-extension */,
+				A3E4D35126E0FD2900C9F175 /* hard-link-actions-extension */,
 			);
 		};
 /* End PBXProject section */
@@ -410,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A30B9AAF265CA63300ACAA63 /* Assets.xcassets in Resources */,
+				A3DC975226F4662F00B506D4 /* Localizable.strings in Resources */,
 				A30B9AB2265CA63300ACAA63 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,7 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A32EE8E0265D4D05008648AA /* Assets.xcassets in Resources */,
-				A3D93EB526A09B5A004E068D /* Localizable.strings in Resources */,
+				A3DC975326F4662F00B506D4 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31904A426E104FA00D7F69D /* Assets.xcassets in Resources */,
-				A3E4D36626E101B000C9F175 /* Localizable.strings in Resources */,
+				A3DC975426F4662F00B506D4 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DC975C26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */,
 				A307B41A26D22116002EEF58 /* ResourcePath.swift in Sources */,
 				A345C9C826A0B552004FBF0F /* ReplaceWithLinkAction.swift in Sources */,
 				A316477726B7B403001DD969 /* CreateLinkAction.swift in Sources */,
@@ -467,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DC975D26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */,
 				A30B9AC1265CA68900ACAA63 /* FinderSync.swift in Sources */,
 				A307B41826D21E39002EEF58 /* Path.swift in Sources */,
 				A307B41B26D22116002EEF58 /* ResourcePath.swift in Sources */,
@@ -483,6 +499,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DC975E26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */,
 				A3E4D36226E0FEF200C9F175 /* ReplaceWithLinkAction.swift in Sources */,
 				A3E4D36326E0FEF400C9F175 /* CreateLinkAction.swift in Sources */,
 				A3E4D36426E0FF8100C9F175 /* ResourcePath.swift in Sources */,
@@ -505,12 +522,12 @@
 		};
 		A30B9AC5265CA68900ACAA63 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A30B9ABD265CA68900ACAA63 /* quick-symlink-extension */;
+			target = A30B9ABD265CA68900ACAA63 /* soft-link-actions-extension */;
 			targetProxy = A30B9AC4265CA68900ACAA63 /* PBXContainerItemProxy */;
 		};
 		A3E4D35926E0FD2900C9F175 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A3E4D35126E0FD2900C9F175 /* hard-link-action-extension */;
+			target = A3E4D35126E0FD2900C9F175 /* hard-link-actions-extension */;
 			targetProxy = A3E4D35826E0FD2900C9F175 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -520,23 +537,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				A30B9AB1265CA63300ACAA63 /* Base */,
-				A3D93EA426A08EDF004E068D /* ru */,
-				A3D93EA826A0904F004E068D /* en */,
-				A3D93EA926A09053004E068D /* en-GB */,
+				A3DC974B26F4659200B506D4 /* en */,
+				A3DC974C26F465C400B506D4 /* en-GB */,
+				A3DC974D26F465CA00B506D4 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A3D93EB726A09B5A004E068D /* Localizable.strings */ = {
+		A3DC975626F4662F00B506D4 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A3D93EB626A09B5A004E068D /* en */,
-				A3D93EB826A09B61004E068D /* Base */,
-				A3D93EB926A09B72004E068D /* en-GB */,
-				A3D93EBA26A09B73004E068D /* ru */,
+				A3DC975526F4662F00B506D4 /* en */,
+				A3DC975726F4663100B506D4 /* en-GB */,
+				A3DC975826F4663200B506D4 /* ru */,
+				A3DC975926F4663F00B506D4 /* Base */,
 			);
 			name = Localizable.strings;
-			path = "quick-symlink-extension";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -719,13 +735,13 @@
 		A30B9AC8265CA68900ACAA63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "quick-symlink-extension/quick-symlink-extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "soft-link-actions-extension/soft-link-actions-extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "quick-symlink-extension/Info.plist";
+				INFOPLIST_FILE = "soft-link-actions-extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.quick-symlink-extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.soft-link-actions-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -735,13 +751,13 @@
 		A30B9AC9265CA68900ACAA63 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "quick-symlink-extension/quick-symlink-extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "soft-link-actions-extension/soft-link-actions-extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "quick-symlink-extension/Info.plist";
+				INFOPLIST_FILE = "soft-link-actions-extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.quick-symlink-extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.soft-link-actions-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -751,13 +767,13 @@
 		A3E4D35C26E0FD2900C9F175 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "hard-link-action-extension/hard-link-action-extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "hard-link-actions-extension/hard-link-actions-extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "hard-link-action-extension/Info.plist";
+				INFOPLIST_FILE = "hard-link-actions-extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.hard-link-action-extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.hard-link-actions-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -767,13 +783,13 @@
 		A3E4D35D26E0FD2900C9F175 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "hard-link-action-extension/hard-link-action-extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "hard-link-actions-extension/hard-link-actions-extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "hard-link-action-extension/Info.plist";
+				INFOPLIST_FILE = "hard-link-actions-extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.hard-link-action-extension";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.ololx.quick-symlink.hard-link-actions-extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -810,7 +826,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A30B9AC7265CA68900ACAA63 /* Build configuration list for PBXNativeTarget "quick-symlink-extension" */ = {
+		A30B9AC7265CA68900ACAA63 /* Build configuration list for PBXNativeTarget "soft-link-actions-extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A30B9AC8265CA68900ACAA63 /* Debug */,
@@ -819,7 +835,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A3E4D35B26E0FD2900C9F175 /* Build configuration list for PBXNativeTarget "hard-link-action-extension" */ = {
+		A3E4D35B26E0FD2900C9F175 /* Build configuration list for PBXNativeTarget "hard-link-actions-extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A3E4D35C26E0FD2900C9F175 /* Debug */,

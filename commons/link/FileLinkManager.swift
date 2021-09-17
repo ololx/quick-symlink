@@ -18,6 +18,15 @@ public protocol FileLinkManager {
 
 public extension FileLinkManager {
     
+    public func getDestinationPath(of: URL!, with: URL!) -> URL! {
+        var destinationPath: Path = ResourcePath.of(url: of);
+        if (QuickSymlinkDefaults(key: "relative-path-strategy", defaultValue: true).get()) {
+            destinationPath = destinationPath.relativize(to: ResourcePath.of(url: with?.deletingLastPathComponent()));
+        }
+        
+        return destinationPath.toUrl();
+    }
+    
     public func getTargetPath(_ from: URL!, to: URL!) -> URL! {
         let originSourceName = from.absoluteURL.deletingPathExtension().lastPathComponent;
         let fileType = from.absoluteURL.pathExtension;
@@ -46,7 +55,8 @@ public class SoftLinkManager: FileLinkManager {
     
     public func linkWith(of: URL!, with: URL!) {
         do {
-            try FileManager.default.createSymbolicLink(at: with!, withDestinationURL: ResourcePath.of(url: of).relativize(to: ResourcePath.of(url: with?.deletingLastPathComponent())).toUrl()!);
+            NSLog("asdasdasd");
+            try FileManager.default.createSymbolicLink(at: with!, withDestinationURL: self.getDestinationPath(of: of, with: with));
         } catch let error as NSError {
             NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
         }
@@ -56,7 +66,7 @@ public class SoftLinkManager: FileLinkManager {
         do {
             //FIXME: Add checking for existance of file & resolving this case with symply pastle link
             try FileManager.default.moveItem(at: of, to: with);
-            try FileManager.default.createSymbolicLink(at: of, withDestinationURL: ResourcePath.of(url: with).relativize(to: ResourcePath.of(url: of.deletingLastPathComponent())).toUrl()!);
+            try FileManager.default.createSymbolicLink(at: of, withDestinationURL: self.getDestinationPath(of: with, with: of));
         } catch let error as NSError {
             NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);
         }
