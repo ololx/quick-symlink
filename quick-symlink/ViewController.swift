@@ -9,11 +9,15 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    
+    @IBOutlet weak var useRelativePath: NSButton!
+    
+    var quickSymlinkDefaults: QuickSymlinkDefaults! = QuickSymlinkDefaults(key: "relative-path-strategy", defaultValue: true);
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.useRelativePath.state = NSControl.StateValue(rawValue: quickSymlinkDefaults.get() ? 1 : 0);
     }
 
     override var representedObject: Any? {
@@ -22,6 +26,17 @@ class ViewController: NSViewController {
         }
     }
 
-
+    
+    @IBAction func onChange(_ sender: NSButton) {
+        switch sender.state {
+            case .on:
+                quickSymlinkDefaults.set(true);
+                break;
+            case .off:
+                quickSymlinkDefaults.set(false);
+                break;
+            default: break;
+        }
+    }
 }
 

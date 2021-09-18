@@ -2,7 +2,7 @@
 
 The Quick Symlink is a `Finder extension`  which provides a `contextual menu item` for the symbolic links creation on macOS. 
 
-[![status](https://img.shields.io/badge/status-active-active?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.8.1-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/last_release-September_13,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-September_13,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
+[![status](https://img.shields.io/badge/status-active-active?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.10.0-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/last_release-September_18,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-September_18,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
 
 [![license](https://img.shields.io/badge/license-MIT-informational?style=flat-square)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)
 
@@ -128,6 +128,10 @@ pluginkit -a quick-symlink.app/Contents/PlugIns/hard-link-action-extension.appex
 pluginkit -r quick-symlink.app/Contents/PlugIns/quick-symlink-extension.appex/
 pluginkit -r quick-symlink.app/Contents/PlugIns/hard-link-action-extension.appex/
 ```
+
+5. [OPTIONAL] Check/Uncheck the checkbox on the Application window "Use relative path for symlink" to use the relative path instead absolute path for the creating symlinks. **By default it's enabled**
+
+<img src="https://github.com/ololx/quick-symlink/blob/assets/use-relative.png?raw=true" width="30%"/>
 
 ### Downloading
 

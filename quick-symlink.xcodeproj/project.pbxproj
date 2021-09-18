@@ -33,12 +33,12 @@
 		A345C9C226A0B30F004FBF0F /* CopyPathAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */; };
 		A345C9C526A0B49C004FBF0F /* PasteLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */; };
 		A345C9C826A0B552004FBF0F /* ReplaceWithLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */; };
+		A35AF46726F51A0B009546C3 /* QuickSymlinkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */; };
 		A36F9B0626DFAC27009E95CE /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
 		A36F9B0726DFB127009E95CE /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
 		A3DC975226F4662F00B506D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC975626F4662F00B506D4 /* Localizable.strings */; };
 		A3DC975326F4662F00B506D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC975626F4662F00B506D4 /* Localizable.strings */; };
 		A3DC975426F4662F00B506D4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3DC975626F4662F00B506D4 /* Localizable.strings */; };
-		A3DC975C26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */; };
 		A3DC975D26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */; };
 		A3DC975E26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */; };
 		A3E4D35526E0FD2900C9F175 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E4D35426E0FD2900C9F175 /* FinderSync.swift */; };
@@ -372,11 +372,22 @@
 					A30B9AA6265CA63300ACAA63 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					A30B9ABD265CA68900ACAA63 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
 							com.apple.Sandbox = {
 								enabled = 1;
 							};
@@ -464,7 +475,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3DC975C26F4A3B800B506D4 /* QuickSymlinkDefaults.swift in Sources */,
 				A307B41A26D22116002EEF58 /* ResourcePath.swift in Sources */,
 				A345C9C826A0B552004FBF0F /* ReplaceWithLinkAction.swift in Sources */,
 				A316477726B7B403001DD969 /* CreateLinkAction.swift in Sources */,
@@ -472,6 +482,7 @@
 				A30B9AAD265CA63300ACAA63 /* ViewController.swift in Sources */,
 				A345C9C226A0B30F004FBF0F /* CopyPathAction.swift in Sources */,
 				A345C9BF26A0B200004FBF0F /* QuickSymlinkAction.swift in Sources */,
+				A35AF46726F51A0B009546C3 /* QuickSymlinkDefaults.swift in Sources */,
 				A30B9AAB265CA63300ACAA63 /* AppDelegate.swift in Sources */,
 				A345C9C526A0B49C004FBF0F /* PasteLinkAction.swift in Sources */,
 				A36F9B0626DFAC27009E95CE /* FileLinkManager.swift in Sources */,

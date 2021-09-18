@@ -10,6 +10,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
+## [0.10.0] - 2021-09-18
+
+### Added
+
+- Add the checkbox button on the application view to switch on/off the relative path use to create a symbolic link.
+- Implement the strategy for create new symlink with relative or absolute path.
+
 ## [0.9.0] - 2021-09-17
 
 ### Changed

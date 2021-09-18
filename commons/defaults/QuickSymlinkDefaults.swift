@@ -16,7 +16,7 @@ public struct QuickSymlinkDefaults<T> {
 public extension QuickSymlinkDefaults {
     
     func get() -> T {
-        guard let valueUntyped = UserDefaults.init(suiteName: "org.ololx.quick-symlink")?.object(forKey: self.key) else {
+        guard let valueUntyped = UserDefaults.init(suiteName: "org.ololx.QuickSymlink")?.object(forKey: self.key) else {
             return self.defaultValue;
         }
         
@@ -28,7 +28,7 @@ public extension QuickSymlinkDefaults {
     }
     
     func set(_ value: T) {
-        UserDefaults.init(suiteName: "org.ololx.quick-symlink")?.set(value, forKey: self.key);
+        UserDefaults.init(suiteName: "org.ololx.QuickSymlink")?.set(value, forKey: self.key);
     }
 }
 
