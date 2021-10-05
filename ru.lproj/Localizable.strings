@@ -13,10 +13,10 @@
 "SOFT_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Создать символьные ссылки для выбранных файлов и папок";
 
 /* Class = "NSMenuItem"; */
-"HARD_LINK_ACTIONS_EXTENTION_NAME" = "Действия с псевдонимами";
+"HARD_LINK_ACTIONS_EXTENTION_NAME" = "Действия с жесткими ссылками";
 
 /* Class = "NSMenuItem"; */
-"HARD_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Создать псевдонимы для выбранных файлов и папок";
+"HARD_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Создать жесткие ссылки для выбранных файлов и папок";
 
 /* Class = "NSMenuItem"; */
 "COPY_PATH_ACTION_NAME" = "Скопировать путь отсюда";

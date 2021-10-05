@@ -12,6 +12,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [0.10.1] - 2021-10-05
 
+### Changed
+
+- Change the menu item names for hard link actions - replace `alias` to `hard link`.
+
 ### Fixed
 
 - Fix the localization bug - onlu russian localization in for all `system languages`.
