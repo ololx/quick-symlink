@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
+## [0.10.1] - 2021-10-05
+
+### Fixed
+
+- Fix the localization bug - onlu russian localization in for all `system languages`.
+
 ## [0.10.0] - 2021-09-18
 
 ### Added

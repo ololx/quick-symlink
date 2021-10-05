@@ -7,26 +7,26 @@
  */
 
 /* Class = "NSMenuItem"; */
-"SOFT_LINK_ACTIONS_EXTENTION_NAME" = "Действия с симлинками";
+"SOFT_LINK_ACTIONS_EXTENTION_NAME" = "Symlink actions";
 
 /* Class = "NSMenuItem"; */
-"SOFT_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Создать символьные ссылки для выбранных файлов и папок";
+"SOFT_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Create symlinks for selected files and folders";
 
 /* Class = "NSMenuItem"; */
-"HARD_LINK_ACTIONS_EXTENTION_NAME" = "Действия с псевдонимами";
+"HARD_LINK_ACTIONS_EXTENTION_NAME" = "Alias actions";
 
 /* Class = "NSMenuItem"; */
-"HARD_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Создать псевдонимы для выбранных файлов и папок";
+"HARD_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Create aliases for selected files and folders";
 
 /* Class = "NSMenuItem"; */
-"COPY_PATH_ACTION_NAME" = "Скопировать путь отсюда";
+"COPY_PATH_ACTION_NAME" = "Copy path ftom here";
 
 /* Class = "NSMenuItem"; */
-"PASTE_LINK_ACTION_NAME" = "Вставить ссылку сюда";
+"PASTE_LINK_ACTION_NAME" = "Paste link to here";
 
 /* Class = "NSMenuItem"; */
-"REPLACE_WITH_LINK_ACTION_NAME" = "Переместить сюда и заменить ссылкой";
+"REPLACE_WITH_LINK_ACTION_NAME" = "Move here and replace with link";
 
 /* Class = "NSMenuItem"; */
-"CREATE_LINK_ACTION_NAME" = "Создать ссылку";
+"CREATE_LINK_ACTION_NAME" = "Create link";
 
