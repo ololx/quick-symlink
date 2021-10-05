@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
+## [0.10.2] - 2021-10-05
+
+### Changed
+
+- Change the menu item names for hard link actions - replace `alias` to `hard link`.
+
 ## [0.10.1] - 2021-10-05
 
 ### Fixed

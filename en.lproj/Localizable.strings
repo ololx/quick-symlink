@@ -7,16 +7,16 @@
  */
 
 /* Class = "NSMenuItem"; */
-"SOFT_LINK_ACTIONS_EXTENTION_NAME" = "Symlink actions";
+"SOFT_LINK_ACTIONS_EXTENTION_NAME" = "Actions with symlinks";
 
 /* Class = "NSMenuItem"; */
 "SOFT_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Create symlinks for selected files and folders";
 
 /* Class = "NSMenuItem"; */
-"HARD_LINK_ACTIONS_EXTENTION_NAME" = "Alias actions";
+"HARD_LINK_ACTIONS_EXTENTION_NAME" = "Actions with hard links";
 
 /* Class = "NSMenuItem"; */
-"HARD_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Create aliases for selected files and folders";
+"HARD_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Create hard links for selected files and folders";
 
 /* Class = "NSMenuItem"; */
 "COPY_PATH_ACTION_NAME" = "Copy path ftom here";
