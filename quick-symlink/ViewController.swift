@@ -35,7 +35,8 @@ class ViewController: NSViewController {
             case .off:
                 quickSymlinkDefaults.set(false);
                 break;
-            default: break;
+            default:
+                break;
         }
     }
 }

@@ -106,7 +106,7 @@
 		A30B9AB3265CA63300ACAA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30B9AB4265CA63300ACAA63 /* quick_symlink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = quick_symlink.entitlements; sourceTree = "<group>"; };
 		A30B9ABE265CA68900ACAA63 /* soft-link-actions-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "soft-link-actions-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A30B9AC0265CA68900ACAA63 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		A30B9AC0265CA68900ACAA63 /* FinderSync.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; tabWidth = 4; wrapsLines = 0; };
 		A30B9AC2265CA68900ACAA63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30B9ACB265CA78600ACAA63 /* soft-link-actions-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "soft-link-actions-extension.entitlements"; sourceTree = "<group>"; };
 		A316477626B7B403001DD969 /* CreateLinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLinkAction.swift; sourceTree = "<group>"; };

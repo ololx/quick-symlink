@@ -30,3 +30,5 @@
 /* Class = "NSMenuItem"; */
 "CREATE_LINK_ACTION_NAME" = "Create link";
 
+/* Class = "NSMenuItem"; */
+"PATH_STRATEGY_OPTION" = "Use relative path";
