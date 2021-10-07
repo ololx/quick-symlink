@@ -11,6 +11,7 @@ import FinderSync
 class FinderSync: FIFinderSync {
     
     let quickSymlinkToolbarItemImage = NSImage(named:NSImage.Name(rawValue: "quick-symlink-toolbar-item-image"));
+    var quickSymlinkDefaults: QuickSymlinkDefaults! = QuickSymlinkDefaults(key: "relative-path-strategy", defaultValue: true);
     
     let copyPathAction = CopyPathAction.init();
     let pasteLinkAction = PasteLinkAction.init(fileLinkManager: SoftLinkManager.init());
@@ -43,7 +44,6 @@ class FinderSync: FIFinderSync {
     }
     
     // MARK: - Primary Finder Sync protocol methods
-    
     override func beginObservingDirectory(at url: URL) {
         // The user is now seeing the container's contents.
         // If they see it in more than one view at a time, we're only told once.
@@ -104,6 +104,17 @@ class FinderSync: FIFinderSync {
             replaceFileWithSymlinkFromClipboardMenuItem.isEnabled = false;
         }
         
+        quickSymlinkMenu.addItem(NSMenuItem.separator());
+        let pathStrategyItem = NSMenuItem.init(
+            title: NSLocalizedString("PATH_STRATEGY_OPTION", comment: ""),
+            action: #selector(onPathStrategyChange(_:)),
+            keyEquivalent: ""
+        );
+        pathStrategyItem.target = self;
+        pathStrategyItem.state = quickSymlinkDefaults.get() ? .on : .off;
+        
+        quickSymlinkMenu.addItem(pathStrategyItem);
+        
         if menuKind.rawValue == 3 {
             return quickSymlinkMenu;
         } else {
@@ -134,5 +145,20 @@ class FinderSync: FIFinderSync {
     
     @IBAction func createSymlink(_ sender: AnyObject?) {
         self.createSymlink.execute();
+    }
+    
+    @IBAction func onPathStrategyChange(_ sender: NSMenuItem!) {
+        sender.state = sender.state == .on ? .off : .on;
+        
+        switch sender.state {
+        case .on:
+            self.quickSymlinkDefaults.set(true);
+            break;
+        case .off:
+            self.quickSymlinkDefaults.set(false);
+            break;
+        default:
+            break;
+        }
     }
 }

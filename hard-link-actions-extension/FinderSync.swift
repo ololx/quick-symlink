@@ -79,6 +79,10 @@ class FinderSync: FIFinderSync {
             keyEquivalent: ""
         );
         
+        /*let separator = NSMenuItem.separator();
+        separator.image = quickSymlinkToolbarItemImage;
+        quickSymlinkMenu.addItem(separator);*/
+        
         quickSymlinkMenu.addItem(
             withTitle: NSLocalizedString("COPY_PATH_ACTION_NAME", comment: ""),
             action: #selector(copyPathToClipboard(_:)),
@@ -101,13 +105,12 @@ class FinderSync: FIFinderSync {
         } else {
             let quickSymLinkMainMenu = NSMenu(title: "");
             let quickSymlinkMenuItem = NSMenuItem(
-                title:  NSLocalizedString("HARD_LINK_ACTIONS_EXTENTION_NAME", comment: ""),
+                title:  NSLocalizedString("" + "HARD_LINK_ACTIONS_EXTENTION_NAME", comment: ""),
                 action: nil,
                 keyEquivalent: ""
             );
             quickSymLinkMainMenu.setSubmenu(quickSymlinkMenu, for: quickSymlinkMenuItem);
             quickSymLinkMainMenu.addItem(quickSymlinkMenuItem);
-            
             return quickSymLinkMainMenu;
         }
     }

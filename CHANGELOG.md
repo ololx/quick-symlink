@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
+## [0.10.3] - 2021-10-07
+
+### Added
+
+- Add the checkbox item on the contextual menu of the `soft link extention` to switch on/off the relative path use to create a symbolic link.
+
 ## [0.10.2] - 2021-10-05
 
 ### Changed
@@ -20,7 +26,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ### Fixed
 
-- Fix the localization bug - onlu russian localization in for all `system languages`.
+- Fix the localization bug - only `Russian` localization in for all `system languages`.
 
 ## [0.10.0] - 2021-09-18
 
