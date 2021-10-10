@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
+## [0.10.4] - 2021-10-10
+
+### Fixed
+
+- Fix  incorrect link location after creation.
+
 ## [0.10.3] - 2021-10-07
 
 ### Added

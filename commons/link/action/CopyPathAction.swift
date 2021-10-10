@@ -35,6 +35,7 @@ public class CopyPathAction: QuickSymlinkAction {
             paths.append(contentsOf: path.relativePath);
             paths.append(";");
         }
+        
         if (!paths.isEmpty) {
             paths.removeLast();
         }

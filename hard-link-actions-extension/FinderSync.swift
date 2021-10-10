@@ -26,7 +26,7 @@ class FinderSync: FIFinderSync {
         let finderSync = FIFinderSyncController.default();
         
         // Shared group preferences required
-        _ = UserDefaults.init(suiteName: "org.ololx.quick-symlink")
+        //_ = UserDefaults.init(suiteName: "org.ololx.QuickSymlink")
         
         if let mountedVolumes = FileManager.default.mountedVolumeURLs(includingResourceValuesForKeys: nil,
                                                                       options: .skipHiddenVolumes) {

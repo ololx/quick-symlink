@@ -22,20 +22,18 @@ public class CreateLinkAction: QuickSymlinkAction {
     
     public func execute() {
         //Get all selected path
-        guard let target = self.finderController.selectedItemURLs() else {
+        guard var target = self.finderController.selectedItemURLs() else {
             NSLog("FinderSync() failed to obtain targeted URLs: %@");
             
             return;
         }
         
-        for path in target {
-            let targetPath = self.fileLinkManager.getTargetPath(path, to: path.deletingLastPathComponent());
-            self.fileLinkManager.linkWith(of: path, with: targetPath);
+        if (target.isEmpty) {
+            target.append(self.finderController.targetedURL()!);
         }
         
-        if (target.isEmpty) {
-            let path = self.finderController.targetedURL()!;
-            let targetPath = self.fileLinkManager.getTargetPath(path, to: path);
+        for path in target {
+            let targetPath = self.fileLinkManager.getTargetPath(path, to: path == self.finderController.targetedURL()! ? path :  path.deletingLastPathComponent());
             self.fileLinkManager.linkWith(of: path, with: targetPath);
         }
     }
