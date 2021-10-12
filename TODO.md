@@ -29,8 +29,9 @@
   - [ ] d1) Сheck the symlink for the existence of the source and fix the source path
   - [ ] d2) Сheck the hard link for the existence of the source and fix the source path
   - [ ] d3) Сheck the aliasfor the existence of the source and fix the source path
-- [ ]  Add localization for other languages.
-- [ ]  Refactor app.
+- [ ]  Add the ability to perform actions with administrator privileges
+- [ ]  Add localization for other languages
+- [ ]  Refactor app
 
 ---
 
