@@ -1,15 +1,23 @@
-# quick-symlink
+<div align="right">
+  <img src="https://img.shields.io/github/downloads/ololx/quick-symlink/total?style=social" alt="downloads"/>
+  <a href="https://github.com/ololx/quick-symlink/discussions" target="_blank">
+		<img src="https://img.shields.io/github/discussions/ololx/quick-symlink?label=welcome%20to%20discussions&logo=github&style=social" alt="discutions"/>
+	</a>
+</div>
 
-The Quick Symlink is a `Finder extension`  which provides a `contextual menu item` for the symbolic links creation on macOS. 
+# Quick Symlink
 
-[![status](https://img.shields.io/badge/status-active-active?style=flat-square)](BADGES_GUIDE.md#status) [![version](https://img.shields.io/badge/version-0.10.4-informational?style=flat-square)](BADGES_GUIDE.md#version) [![oss lifecycle](https://img.shields.io/badge/oss_lifecycle-active-important?style=flat-square)](BADGES_GUIDE.md#oss-lifecycle) [![maintenance](https://img.shields.io/badge/maintenance-yes-informational?style=flat-square)](BADGES_GUIDE.md#maintenance) [![last release](https://img.shields.io/badge/last_release-October_10,_2021-informational?style=flat-square)](BADGES_GUIDE.md#release-date) [![last commit](https://img.shields.io/badge/last_commit-October_12,_2021-informational?style=flat-square)](BADGES_GUIDE.md#commit-date)
+The Quick Symlink is a `Finder extension`  which provides a `contextual menu item` for the symbolic links (and other links) creation on macOS. 
 
-[![license](https://img.shields.io/badge/license-MIT-informational?style=flat-square)](LICENSE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg?style=flat-square)](CODE_OF_CONDUCT.md)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fololx%2Fquick-symlink.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fololx%2Fquick-symlink?ref=badge_shield)
+[![tag](https://img.shields.io/github/v/tag/ololx/quick-symlink?style=flat&include_prereleases&logo=github)](https://github.com/ololx/quick-symlink/tags) [![release](https://img.shields.io/github/v/release/ololx/quick-symlink?style=flat&include_prereleases&logo=github)](https://github.com/ololx/quick-symlink/releases)
 
-[![platform](https://img.shields.io/badge/platform-OS_X_10.10+-important?style=flat-square)](https://en.wikipedia.org/wiki/Computing_platform)
+[![osslifecycle](https://img.shields.io/osslifecycle/ololx/quick-symlink?style=flat)](OSSMETADATA) [![last_commit](https://img.shields.io/github/last-commit/ololx/quick-symlink?style=flat&logo=github)](https://github.com/ololx/quick-symlink/commits) [![release_date](https://img.shields.io/github/release-date/ololx/quick-symlink?style=flat&logo=github)](https://github.com/ololx/quick-symlink/releases)
 
----
+[![licence](https://img.shields.io/github/license/ololx/quick-symlink?style=flat)](LICENCE) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg?style=flat)](CODE_OF_CONDUCT.md) [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fololx%2Fquick-symlink.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fololx%2Fquick-symlink?ref=badge_shield)
+
+![repo_size](https://img.shields.io/github/repo-size/ololx/quick-symlink?style=flat&logo=github) ![languages_code_size](https://img.shields.io/github/languages/code-size/ololx/quick-symlink?style=flat&logo=github) ![languages_count](https://img.shields.io/github/languages/count/ololx/quick-symlink?style=flat&logo=github) ![languages_top](https://img.shields.io/github/languages/top/ololx/quick-symlink?style=flat&logo=github)
+
+![platform](https://img.shields.io/badge/platform-OS_X_10.10+-important?style=flat)
 
 ## 📇 Table of Contents
 
