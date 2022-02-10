@@ -18,7 +18,7 @@ public protocol FileLinkManager {
 
 public extension FileLinkManager {
     
-    public func getDestinationPath(of: URL!, with: URL!) -> URL! {
+    func getDestinationPath(of: URL!, with: URL!) -> URL! {
         var destinationPath: Path = ResourcePath.of(url: of);
         if (QuickSymlinkDefaults(key: "relative-path-strategy", defaultValue: true).get()) {
             destinationPath = destinationPath.relativize(to: ResourcePath.of(url: with?.deletingLastPathComponent()));
@@ -27,7 +27,7 @@ public extension FileLinkManager {
         return destinationPath.toUrl();
     }
     
-    public func getTargetPath(_ from: URL!, to: URL!) -> URL! {
+    func getTargetPath(_ from: URL!, to: URL!) -> URL! {
         let originSourceName = from.absoluteURL.deletingPathExtension().lastPathComponent;
         let fileType = from.absoluteURL.pathExtension;
         

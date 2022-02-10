@@ -28,11 +28,16 @@
 		A316477826B7B403001DD969 /* CreateLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316477626B7B403001DD969 /* CreateLinkAction.swift */; };
 		A31904A426E104FA00D7F69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A31904A326E104FA00D7F69D /* Assets.xcassets */; };
 		A32EE8E0265D4D05008648AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A32EE8DF265D4D05008648AA /* Assets.xcassets */; };
-		A34185F126EF767900224992 /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
 		A345C9BF26A0B200004FBF0F /* QuickSymlinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9BE26A0B200004FBF0F /* QuickSymlinkAction.swift */; };
 		A345C9C226A0B30F004FBF0F /* CopyPathAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */; };
 		A345C9C526A0B49C004FBF0F /* PasteLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */; };
 		A345C9C826A0B552004FBF0F /* ReplaceWithLinkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */; };
+		A34F677227B561D90092BA64 /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
+		A34F677327B561FC0092BA64 /* QuickSymlinkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */; };
+		A34F677527B563570092BA64 /* QuickSymlinkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F677427B563570092BA64 /* QuickSymlinkSettings.swift */; };
+		A34F677627B563570092BA64 /* QuickSymlinkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F677427B563570092BA64 /* QuickSymlinkSettings.swift */; };
+		A34F677727B563570092BA64 /* QuickSymlinkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F677427B563570092BA64 /* QuickSymlinkSettings.swift */; };
+		A34F677827B563570092BA64 /* QuickSymlinkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34F677427B563570092BA64 /* QuickSymlinkSettings.swift */; };
 		A35AF46726F51A0B009546C3 /* QuickSymlinkDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */; };
 		A36F9B0626DFAC27009E95CE /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
 		A36F9B0726DFB127009E95CE /* FileLinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */; };
@@ -116,6 +121,7 @@
 		A345C9C126A0B30F004FBF0F /* CopyPathAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyPathAction.swift; sourceTree = "<group>"; };
 		A345C9C426A0B49C004FBF0F /* PasteLinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteLinkAction.swift; sourceTree = "<group>"; };
 		A345C9C726A0B552004FBF0F /* ReplaceWithLinkAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceWithLinkAction.swift; sourceTree = "<group>"; };
+		A34F677427B563570092BA64 /* QuickSymlinkSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSymlinkSettings.swift; sourceTree = "<group>"; };
 		A36F9B0526DFAC27009E95CE /* FileLinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileLinkManager.swift; sourceTree = "<group>"; };
 		A3DC974B26F4659200B506D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		A3DC974C26F465C400B506D4 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -264,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				A3DC975B26F4A3B800B506D4 /* QuickSymlinkDefaults.swift */,
+				A34F677427B563570092BA64 /* QuickSymlinkSettings.swift */,
 			);
 			path = defaults;
 			sourceTree = "<group>";
@@ -404,6 +411,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 				"en-GB",
 				ru,
@@ -464,8 +472,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A34F677327B561FC0092BA64 /* QuickSymlinkDefaults.swift in Sources */,
 				A307B43026D257C5002EEF58 /* ResourcePath.swift in Sources */,
-				A34185F126EF767900224992 /* FileLinkManager.swift in Sources */,
+				A34F677227B561D90092BA64 /* FileLinkManager.swift in Sources */,
+				A34F677727B563570092BA64 /* QuickSymlinkSettings.swift in Sources */,
 				A307B42F26D2563B002EEF58 /* ResourcePathTest.swift in Sources */,
 				A307B43126D257CA002EEF58 /* Path.swift in Sources */,
 			);
@@ -484,6 +494,7 @@
 				A345C9BF26A0B200004FBF0F /* QuickSymlinkAction.swift in Sources */,
 				A35AF46726F51A0B009546C3 /* QuickSymlinkDefaults.swift in Sources */,
 				A30B9AAB265CA63300ACAA63 /* AppDelegate.swift in Sources */,
+				A34F677527B563570092BA64 /* QuickSymlinkSettings.swift in Sources */,
 				A345C9C526A0B49C004FBF0F /* PasteLinkAction.swift in Sources */,
 				A36F9B0626DFAC27009E95CE /* FileLinkManager.swift in Sources */,
 			);
@@ -503,6 +514,7 @@
 				A30D4A4D26A0C18B00BA775B /* QuickSymlinkAction.swift in Sources */,
 				A30D4A4A26A0C14400BA775B /* CopyPathAction.swift in Sources */,
 				A36F9B0726DFB127009E95CE /* FileLinkManager.swift in Sources */,
+				A34F677627B563570092BA64 /* QuickSymlinkSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +532,7 @@
 				A3E4D36126E0FEEF00C9F175 /* PasteLinkAction.swift in Sources */,
 				A3E4D36526E0FF8600C9F175 /* Path.swift in Sources */,
 				A3E4D35E26E0FEE700C9F175 /* FileLinkManager.swift in Sources */,
+				A34F677827B563570092BA64 /* QuickSymlinkSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,14 +9,16 @@
 import Foundation
 
 public struct QuickSymlinkDefaults<T> {
+    
     var key: String
+    
     var defaultValue: T
 }
 
 public extension QuickSymlinkDefaults {
     
     func get() -> T {
-        guard let valueUntyped = UserDefaults.init(suiteName: "org.ololx.QuickSymlink")?.object(forKey: self.key) else {
+        guard let valueUntyped = UserDefaults.init(suiteName: "io.github.ololx.QuickSymlink")?.object(forKey: self.key) else {
             return self.defaultValue;
         }
         
@@ -28,22 +30,6 @@ public extension QuickSymlinkDefaults {
     }
     
     func set(_ value: T) {
-        UserDefaults.init(suiteName: "org.ololx.QuickSymlink")?.set(value, forKey: self.key);
+        UserDefaults.init(suiteName: "io.github.ololx.QuickSymlink")?.set(value, forKey: self.key);
     }
-}
-
-public enum QuickSymlinkSettings {
-    
-    static var relativePath: Bool {
-        get {
-            return pathTypeStrategyDefaults.get();
-            
-        }
-        set {
-            pathTypeStrategyDefaults.set(newValue);
-            
-        }
-    }
-    
-    private static var pathTypeStrategyDefaults = QuickSymlinkDefaults(key: "relative-path-strategy", defaultValue: false);
 }

@@ -10,6 +10,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
+## [0.10.5] - 2022-02-10
+
+### Changed
+
+- Delete public modifiers for methods in public extensions.
+- Delete @obj method for authorizing.
+- Refactor defaults.
+
 ## [0.10.4] - 2021-10-10
 
 ### Fixed
