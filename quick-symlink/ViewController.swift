@@ -30,7 +30,7 @@ class ViewController: NSViewController {
     @IBAction func onChange(_ sender: NSButton) {
         switch sender.state {
             case .on:
-                quickSymlinkDefaults.set(true);
+            quickSymlinkDefaults.set(true);
                 break;
             case .off:
                 quickSymlinkDefaults.set(false);

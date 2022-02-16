@@ -9,7 +9,7 @@
 import Foundation
 import FinderSync
 
-public class CopyPathAction: QuickSymlinkAction {
+public class CopyPathAction: Action {
     
     private var finderController: FIFinderSyncController;
 

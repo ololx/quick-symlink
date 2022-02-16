@@ -79,10 +79,6 @@ class FinderSync: FIFinderSync {
             keyEquivalent: ""
         );
         
-        /*let separator = NSMenuItem.separator();
-        separator.image = quickSymlinkToolbarItemImage;
-        quickSymlinkMenu.addItem(separator);*/
-        
         quickSymlinkMenu.addItem(
             withTitle: NSLocalizedString("COPY_PATH_ACTION_NAME", comment: ""),
             action: #selector(copyPathToClipboard(_:)),

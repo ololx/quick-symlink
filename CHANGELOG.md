@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Refactor application.
 
+## [0.10.6] - 2022-02-16
+
+### Fixed
+
+- Fix the menu items duplicate problem - the menu items appends (+ 1) for every menu showing.
+
 ## [0.10.5] - 2022-02-10
 
 ### Changed

@@ -9,7 +9,7 @@
 import Foundation
 import FinderSync
 
-public class PasteLinkAction: QuickSymlinkAction {
+public class PasteLinkAction: Action {
     
     private var finderController: FIFinderSyncController;
     

@@ -73,16 +73,19 @@ class FinderSync: FIFinderSync {
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
         // Produce a menu for the extension (to be shown when right clicking a folder in Finder)
         let quickSymlinkMenu = NSMenu(title: "");
-        quickSymlinkMenu.addItem(
+        
+        quickSymlinkMenu.insertItem(
             withTitle: NSLocalizedString("CREATE_LINK_ACTION_NAME", comment: ""),
             action: #selector(createSymlink(_:)),
-            keyEquivalent: ""
+            keyEquivalent: "",
+            at: 0
         );
         
-        quickSymlinkMenu.addItem(
+        quickSymlinkMenu.insertItem(
             withTitle: NSLocalizedString("COPY_PATH_ACTION_NAME", comment: ""),
             action: #selector(copyPathToClipboard(_:)),
-            keyEquivalent: ""
+            keyEquivalent: "",
+            at: 1
         );
         
         let pastleSymlinkFromClipboardMenuItem = NSMenuItem.init(
@@ -90,14 +93,14 @@ class FinderSync: FIFinderSync {
             action: #selector(pastleSymlinkFromClipboard(_:)),
             keyEquivalent: ""
         );
-        quickSymlinkMenu.addItem(pastleSymlinkFromClipboardMenuItem);
+        quickSymlinkMenu.insertItem(pastleSymlinkFromClipboardMenuItem, at: 2);
         
         let replaceFileWithSymlinkFromClipboardMenuItem = NSMenuItem.init(
             title: NSLocalizedString("REPLACE_WITH_LINK_ACTION_NAME", comment: ""),
             action: #selector(replaceFileWithSymlinkFromClipboard(_:)),
             keyEquivalent: ""
         );
-        quickSymlinkMenu.addItem(replaceFileWithSymlinkFromClipboardMenuItem);
+        quickSymlinkMenu.insertItem(replaceFileWithSymlinkFromClipboardMenuItem, at: 3);
         
         if (NSPasteboard.init(name: NSPasteboard.Name.init(rawValue: "qs")).string(forType: NSPasteboard.PasteboardType.string) ?? "").isEmpty {
             pastleSymlinkFromClipboardMenuItem.isEnabled = false;

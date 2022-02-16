@@ -55,7 +55,6 @@ public class SoftLinkManager: FileLinkManager {
     
     public func linkWith(of: URL!, with: URL!) {
         do {
-            NSLog("asdasdasd");
             try FileManager.default.createSymbolicLink(at: with!, withDestinationURL: self.getDestinationPath(of: of, with: with));
         } catch let error as NSError {
             NSLog("FileManager.createSymbolicLink() failed to create file: %@", error.description as NSString);

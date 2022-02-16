@@ -9,7 +9,7 @@
 import Foundation
 import FinderSync
 
-public class CreateLinkAction: QuickSymlinkAction {
+public class CreateLinkAction: Action {
     
     private var finderController: FIFinderSyncController;
     

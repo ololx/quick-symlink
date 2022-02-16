@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum QuickSymlinkSettings {
+public enum Config {
     
     static var relativePath: Bool {
         get {

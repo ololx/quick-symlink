@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol QuickSymlinkAction {
+public protocol Action {
     
     func execute();
 }
