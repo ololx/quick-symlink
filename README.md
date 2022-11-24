@@ -1,6 +1,6 @@
 <div align="right">
   <img src="https://img.shields.io/github/downloads/ololx/quick-symlink/total?style=social" alt="downloads"/>
-  <a href="https://github.com/ololx/quick-symlink/discussions" target="_blank">
+  	<a href="https://github.com/ololx/quick-symlink/discussions" target="_blank">
 		<img src="https://img.shields.io/github/discussions/ololx/quick-symlink?label=welcome%20to%20discussions&logo=github&style=social" alt="discutions"/>
 	</a>
 </div>
