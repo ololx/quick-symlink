@@ -1,4 +1,7 @@
 <div align="right">
+  <a href="https://github.com/ololx/quick-symlink/stargazers" target="_blank">
+		<img src="https://img.shields.io/github/stars/ololx/quick-symlink?style=social" alt="Stars earned"/>
+	</a>
   <img src="https://img.shields.io/github/downloads/ololx/quick-symlink/total?style=social" alt="downloads"/>
   	<a href="https://github.com/ololx/quick-symlink/discussions" target="_blank">
 		<img src="https://img.shields.io/github/discussions/ololx/quick-symlink?label=welcome%20to%20discussions&logo=github&style=social" alt="discutions"/>
