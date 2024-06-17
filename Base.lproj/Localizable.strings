@@ -1,7 +1,7 @@
 /*
  Localizable.strings
  quick-symlink
- 
+
  Created by Alexander A. Kropotin on 15/07/2021.
  Copyright © 2021 Alexander A. Kropotin. All rights reserved.
  */
@@ -19,7 +19,7 @@
 "HARD_LINK_ACTIONS_EXTENTION_TOOL_TIP" = "Create hard links for selected files and folders";
 
 /* Class = "NSMenuItem"; */
-"COPY_PATH_ACTION_NAME" = "Copy path ftom here";
+"COPY_PATH_ACTION_NAME" = "Copy path from here";
 
 /* Class = "NSMenuItem"; */
 "PASTE_LINK_ACTION_NAME" = "Paste link to here";
